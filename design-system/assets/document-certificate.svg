@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 444" width="630" height="444" role="img" aria-label="Подарочный сертификат на курс"><title>Подарочный сертификат на курс</title>
+<rect width="630" height="444" fill="#FBF8F3"/>
+<rect x="18" y="18" width="594" height="408" fill="none" stroke="#D8C4A8" stroke-width="2"/>
+<rect x="26" y="26" width="578" height="392" fill="none" stroke="#C9922F" stroke-width="0.8"/>
+<g fill="none" stroke-linecap="round" transform="translate(284.0 46) scale(1.0)"><path d="M10 44a22 22 0 0 1 44 0" stroke="#1F3D32" stroke-width="5"/><path d="M18.5 44a13.5 13.5 0 0 1 27 0" stroke="#2E5A49" stroke-width="5"/><path d="M27 44a5 5 0 0 1 10 0" stroke="#C06B4A" stroke-width="5"/><path d="M7 51.5h50" stroke="#1F3D32" stroke-width="5"/></g>
+<text x="315.0" y="140" font-family="PT Serif, Georgia, serif" font-size="24" font-weight="700" fill="#1F3D32" text-anchor="middle" letter-spacing="5">ОРОМ</text>
+<text x="315.0" y="158" font-family="Inter, Helvetica, sans-serif" font-size="7.5" font-weight="400" fill="#7A6E62" text-anchor="middle" letter-spacing="1">ЦЕНТР МАССАЖА И ВОССТАНОВЛЕНИЯ · ДУШАНБЕ</text>
+<rect x="281.0" y="178" width="68" height="2" fill="#C06B4A"/>
+<text x="315.0" y="214" font-family="Inter, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#9E4A2E" text-anchor="middle" letter-spacing="3">ПОДАРОЧНЫЙ СЕРТИФИКАТ</text>
+<text x="315.0" y="254" font-family="PT Serif, Georgia, serif" font-size="26" font-weight="700" fill="#1F3D32" text-anchor="middle">на курс из десяти сеансов</text>
+<text x="315.0" y="278" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#4A423A" text-anchor="middle">Сертификат барои курси даҳсеансӣ</text>
+<text x="56" y="312" font-family="Inter, Helvetica, sans-serif" font-size="7.5" font-weight="400" fill="#7A6E62" text-anchor="start" letter-spacing="0.8">КОМУ</text>
+<path d="M56 332h220" stroke="#E3D9CB" stroke-width="1"/>
+<text x="296" y="312" font-family="Inter, Helvetica, sans-serif" font-size="7.5" font-weight="400" fill="#7A6E62" text-anchor="start" letter-spacing="0.8">ОТ КОГО</text>
+<path d="M296 332h130" stroke="#E3D9CB" stroke-width="1"/>
+<text x="440" y="312" font-family="Inter, Helvetica, sans-serif" font-size="7.5" font-weight="400" fill="#7A6E62" text-anchor="start" letter-spacing="0.8">№</text>
+<path d="M440 332h46" stroke="#E3D9CB" stroke-width="1"/>
+<text x="498" y="312" font-family="Inter, Helvetica, sans-serif" font-size="7.5" font-weight="400" fill="#7A6E62" text-anchor="start" letter-spacing="0.8">ДЕЙСТВУЕТ ДО</text>
+<path d="M498 332h76" stroke="#E3D9CB" stroke-width="1"/>
+<text x="440" y="328" font-family="JetBrains Mono, monospace" font-size="11" font-weight="400" fill="#1A1714" text-anchor="start">0042</text>
+<text x="498" y="328" font-family="JetBrains Mono, monospace" font-size="11" font-weight="400" fill="#1A1714" text-anchor="start">23.04.2027</text>
+<text x="56" y="372" font-family="Inter, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#4A423A" text-anchor="start">Получатель сам выбирает мастера и удобное время. Срок действия — 6 месяцев с даты выдачи.</text>
+<text x="56" y="388" font-family="Inter, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#7A6E62" text-anchor="start">Гиранда худаш устод ва вақти муносибро интихоб мекунад. Мӯҳлати эътибор — 6 моҳ.</text>
+<text x="56" y="416" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="400" fill="#2E5A49" text-anchor="start">+992 93 172 77 77 · orom.tj</text>
+<circle cx="540" cy="394" r="30" fill="none" stroke="#D8C4A8" stroke-width="1" stroke-dasharray="2 3"/>
+<text x="540" y="397" font-family="Inter, Helvetica, sans-serif" font-size="8" font-weight="400" fill="#7A6E62" text-anchor="middle">печать</text>
+</svg>

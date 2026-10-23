@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 660" width="460" height="660" role="img" aria-label="Месячный отчёт по корпоративному пакету"><title>Месячный отчёт по пакету</title>
+<rect width="460" height="660" fill="#FFFFFF"/>
+<g fill="none" stroke-linecap="round" transform="translate(30 20) scale(0.4)"><path d="M10 44a22 22 0 0 1 44 0" stroke="#1F3D32" stroke-width="5"/><path d="M18.5 44a13.5 13.5 0 0 1 27 0" stroke="#2E5A49" stroke-width="5"/><path d="M27 44a5 5 0 0 1 10 0" stroke="#C06B4A" stroke-width="5"/><path d="M7 51.5h50" stroke="#1F3D32" stroke-width="5"/></g>
+<text x="60" y="44" font-family="PT Serif, Georgia, serif" font-size="14" font-weight="700" fill="#1F3D32" text-anchor="start" letter-spacing="2.5">ОРОМ</text>
+<text x="61" y="54" font-family="Inter, Helvetica, sans-serif" font-size="5.5" font-weight="400" fill="#7A6E62" text-anchor="start" letter-spacing="0.5">ЦЕНТР МАССАЖА И ВОССТАНОВЛЕНИЯ</text>
+<text x="430" y="40" font-family="Inter, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#4A423A" text-anchor="end">Отчёт № 10-2026/АВ</text>
+<text x="430" y="52" font-family="Inter, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#7A6E62" text-anchor="end">от 31.10.2026</text>
+<path d="M30 68h400" stroke="#1F3D32" stroke-width="1.5"/>
+<text x="30" y="98" font-family="PT Serif, Georgia, serif" font-size="17" font-weight="700" fill="#1A1714" text-anchor="start">Отчёт по корпоративному пакету</text>
+<text x="30" y="116" font-family="Inter, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#4A423A" text-anchor="start">ООО «Альфа Групп» · пакет 80 сеансов · 01.10–31.10.2026</text>
+<rect x="30" y="136" width="92" height="46" fill="#F4EDE3"/>
+<text x="39" y="161" font-family="PT Serif, Georgia, serif" font-size="15" font-weight="700" fill="#1A1714" text-anchor="start">93</text>
+<text x="39" y="174" font-family="Inter, Helvetica, sans-serif" font-size="6.6" font-weight="400" fill="#7A6E62" text-anchor="start">сеанса проведено</text>
+<rect x="130" y="136" width="92" height="46" fill="#F4EDE3"/>
+<text x="139" y="161" font-family="PT Serif, Georgia, serif" font-size="15" font-weight="700" fill="#1A1714" text-anchor="start">12</text>
+<text x="139" y="174" font-family="Inter, Helvetica, sans-serif" font-size="6.6" font-weight="400" fill="#7A6E62" text-anchor="start">сотрудников</text>
+<rect x="230" y="136" width="92" height="46" fill="#F4EDE3"/>
+<text x="239" y="161" font-family="PT Serif, Georgia, serif" font-size="15" font-weight="700" fill="#1A1714" text-anchor="start">5</text>
+<text x="239" y="174" font-family="Inter, Helvetica, sans-serif" font-size="6.6" font-weight="400" fill="#7A6E62" text-anchor="start">курсов завершено</text>
+<rect x="330" y="136" width="92" height="46" fill="#F4EDE3"/>
+<text x="339" y="161" font-family="PT Serif, Georgia, serif" font-size="15" font-weight="700" fill="#1A1714" text-anchor="start">13 дн.</text>
+<text x="339" y="174" font-family="Inter, Helvetica, sans-serif" font-size="6.6" font-weight="400" fill="#7A6E62" text-anchor="start">средний срок курса</text>
+<text x="30" y="206" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#1A1714" text-anchor="start">Явка по сотрудникам</text>
+<rect x="30" y="218" width="400" height="18" fill="#EADFD0"/>
+<text x="33" y="230.5" font-family="Inter, Helvetica, sans-serif" font-size="6.4" font-weight="600" fill="#4A423A" text-anchor="start" letter-spacing="0.4">№</text>
+<text x="51" y="230.5" font-family="Inter, Helvetica, sans-serif" font-size="6.4" font-weight="600" fill="#4A423A" text-anchor="start" letter-spacing="0.4">СОТРУДНИК</text>
+<text x="199" y="230.5" font-family="Inter, Helvetica, sans-serif" font-size="6.4" font-weight="600" fill="#4A423A" text-anchor="start" letter-spacing="0.4">СЕАНСОВ</text>
+<text x="249" y="230.5" font-family="Inter, Helvetica, sans-serif" font-size="6.4" font-weight="600" fill="#4A423A" text-anchor="start" letter-spacing="0.4">КУРС</text>
+<text x="301" y="230.5" font-family="Inter, Helvetica, sans-serif" font-size="6.4" font-weight="600" fill="#4A423A" text-anchor="start" letter-spacing="0.4">НАЧАЛО</text>
+<text x="353" y="230.5" font-family="Inter, Helvetica, sans-serif" font-size="6.4" font-weight="600" fill="#4A423A" text-anchor="start" letter-spacing="0.4">ОКОНЧАНИЕ</text>
+<text x="33" y="248" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#7A6E62" text-anchor="start">1</text>
+<text x="51" y="248" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">Рахимов Далер</text>
+<text x="199" y="248" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">13</text>
+<text x="249" y="248" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">10/10</text>
+<text x="301" y="248" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">01.10</text>
+<text x="353" y="248" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#3F7A62" text-anchor="start">23.10 ✓</text>
+<path d="M30 253h400" stroke="#E3D9CB" stroke-width="0.5"/>
+<rect x="30" y="253" width="400" height="17" fill="#FBF8F3"/>
+<text x="33" y="265" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#7A6E62" text-anchor="start">2</text>
+<text x="51" y="265" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">Саидова Нигина</text>
+<text x="199" y="265" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">10</text>
+<text x="249" y="265" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">10/10</text>
+<text x="301" y="265" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">06.10</text>
+<text x="353" y="265" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#3F7A62" text-anchor="start">17.10 ✓</text>
+<path d="M30 270h400" stroke="#E3D9CB" stroke-width="0.5"/>
+<text x="33" y="282" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#7A6E62" text-anchor="start">3</text>
+<text x="51" y="282" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">Каримов Фируз</text>
+<text x="199" y="282" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">10</text>
+<text x="249" y="282" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">10/10</text>
+<text x="301" y="282" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">01.10</text>
+<text x="353" y="282" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#3F7A62" text-anchor="start">13.10 ✓</text>
+<path d="M30 287h400" stroke="#E3D9CB" stroke-width="0.5"/>
+<rect x="30" y="287" width="400" height="17" fill="#FBF8F3"/>
+<text x="33" y="299" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#7A6E62" text-anchor="start">4</text>
+<text x="51" y="299" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">Назаров Бехруз</text>
+<text x="199" y="299" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">10</text>
+<text x="249" y="299" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">10/10</text>
+<text x="301" y="299" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">19.10</text>
+<text x="353" y="299" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#3F7A62" text-anchor="start">30.10 ✓</text>
+<path d="M30 304h400" stroke="#E3D9CB" stroke-width="0.5"/>
+<text x="33" y="316" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#7A6E62" text-anchor="start">5</text>
+<text x="51" y="316" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">Холов Акмал</text>
+<text x="199" y="316" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">10</text>
+<text x="249" y="316" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">10/10</text>
+<text x="301" y="316" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">13.10</text>
+<text x="353" y="316" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#3F7A62" text-anchor="start">24.10 ✓</text>
+<path d="M30 321h400" stroke="#E3D9CB" stroke-width="0.5"/>
+<rect x="30" y="321" width="400" height="17" fill="#FBF8F3"/>
+<text x="33" y="333" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#7A6E62" text-anchor="start">6</text>
+<text x="51" y="333" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">Шарипова Зарина</text>
+<text x="199" y="333" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">9</text>
+<text x="249" y="333" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">9/10</text>
+<text x="301" y="333" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">13.10</text>
+<text x="353" y="333" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">в работе</text>
+<path d="M30 338h400" stroke="#E3D9CB" stroke-width="0.5"/>
+<text x="33" y="350" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#7A6E62" text-anchor="start">7</text>
+<text x="51" y="350" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">Одинаев Сухроб</text>
+<text x="199" y="350" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">7</text>
+<text x="249" y="350" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">7/10</text>
+<text x="301" y="350" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">17.10</text>
+<text x="353" y="350" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">в работе</text>
+<path d="M30 355h400" stroke="#E3D9CB" stroke-width="0.5"/>
+<rect x="30" y="355" width="400" height="17" fill="#FBF8F3"/>
+<text x="33" y="367" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#7A6E62" text-anchor="start">8</text>
+<text x="51" y="367" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">Муродов Чамшед</text>
+<text x="199" y="367" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">6</text>
+<text x="249" y="367" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">6/10</text>
+<text x="301" y="367" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">13.10</text>
+<text x="353" y="367" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">в работе</text>
+<path d="M30 372h400" stroke="#E3D9CB" stroke-width="0.5"/>
+<text x="33" y="384" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#7A6E62" text-anchor="start">9</text>
+<text x="51" y="384" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">Бобоев Сино</text>
+<text x="199" y="384" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">6</text>
+<text x="249" y="384" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">6/10</text>
+<text x="301" y="384" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">02.10</text>
+<text x="353" y="384" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">в работе</text>
+<path d="M30 389h400" stroke="#E3D9CB" stroke-width="0.5"/>
+<rect x="30" y="389" width="400" height="17" fill="#FBF8F3"/>
+<text x="33" y="401" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#7A6E62" text-anchor="start">10</text>
+<text x="51" y="401" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">Камолова Нилуфар</text>
+<text x="199" y="401" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">5</text>
+<text x="249" y="401" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">5/10</text>
+<text x="301" y="401" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">09.10</text>
+<text x="353" y="401" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">в работе</text>
+<path d="M30 406h400" stroke="#E3D9CB" stroke-width="0.5"/>
+<text x="33" y="418" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#7A6E62" text-anchor="start">11</text>
+<text x="51" y="418" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">Ятимова Шахло</text>
+<text x="199" y="418" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">4</text>
+<text x="249" y="418" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">4/10</text>
+<text x="301" y="418" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">17.10</text>
+<text x="353" y="418" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">в работе</text>
+<path d="M30 423h400" stroke="#E3D9CB" stroke-width="0.5"/>
+<rect x="30" y="423" width="400" height="17" fill="#FBF8F3"/>
+<text x="33" y="435" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#7A6E62" text-anchor="start">12</text>
+<text x="51" y="435" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">Саидова Нигина</text>
+<text x="199" y="435" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">3</text>
+<text x="249" y="435" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">3/10</text>
+<text x="301" y="435" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">17.10</text>
+<text x="353" y="435" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="400" fill="#1A1714" text-anchor="start">в работе</text>
+<path d="M30 440h400" stroke="#E3D9CB" stroke-width="0.5"/>
+<rect x="30" y="440" width="400" height="19" fill="#DCE9E3"/>
+<text x="52" y="453" font-family="Inter, Helvetica, sans-serif" font-size="7.6" font-weight="600" fill="#1A1714" text-anchor="start">ИТОГО</text>
+<text x="199" y="453" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="700" fill="#1A1714" text-anchor="start">93</text>
+<text x="249" y="453" font-family="Inter, Helvetica, sans-serif" font-size="7" font-weight="400" fill="#4A423A" text-anchor="start">из 80 в пакете</text>
+<text x="30" y="482" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#1A1714" text-anchor="start">Выводы и рекомендации</text>
+<text x="30" y="499" font-family="Inter, Helvetica, sans-serif" font-size="8.2" font-weight="400" fill="#4A423A" text-anchor="start">— курс завершили 5 сотрудников из 12, средний срок — 13 дней;</text>
+<text x="30" y="512" font-family="Inter, Helvetica, sans-serif" font-size="8.2" font-weight="400" fill="#4A423A" text-anchor="start">— 7 курсов продолжаются, плановое окончание — первая декада ноября;</text>
+<text x="30" y="525" font-family="Inter, Helvetica, sans-serif" font-size="8.2" font-weight="400" fill="#4A423A" text-anchor="start">— пакет исчерпан на 93 сеанса из 80: 13 сеансов отнесены на следующий период;</text>
+<text x="30" y="538" font-family="Inter, Helvetica, sans-serif" font-size="8.2" font-weight="400" fill="#4A423A" text-anchor="start">— рекомендуем перевести 3 сотрудников на слот 15:30 — он свободен ежедневно.</text>
+<path d="M30 574h150" stroke="#1A1714" stroke-width="0.8"/>
+<text x="30" y="585" font-family="Inter, Helvetica, sans-serif" font-size="7.2" font-weight="400" fill="#7A6E62" text-anchor="start">Администратор центра</text>
+<path d="M280 574h150" stroke="#1A1714" stroke-width="0.8"/>
+<text x="280" y="585" font-family="Inter, Helvetica, sans-serif" font-size="7.2" font-weight="400" fill="#7A6E62" text-anchor="start">Представитель компании</text>
+<text x="30" y="642" font-family="Inter, Helvetica, sans-serif" font-size="7.2" font-weight="400" fill="#7A6E62" text-anchor="start">Центр массажа и восстановления «ОРОМ» · Душанбе · +992 93 172 77 77 · orom.tj</text>
+</svg>

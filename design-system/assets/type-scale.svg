@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 629" width="880" height="629" role="img" aria-label="Типографическая шкала ОРОМ">
+<title>Типографическая шкала</title><rect width="880" height="629" fill="#FBF8F3"/>
+<text x="28" y="34" font-family="PT Serif, Georgia, serif" font-size="20" font-weight="700" fill="#1F3D32">Типографическая шкала · шаг 1,25</text>
+<text x="28" y="58" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="600" fill="#9E4A2E">display-1</text>
+<text x="28" y="73" font-family="Inter, Helvetica, sans-serif" font-size="10.5" fill="#7A6E62">72 / 76 · PT Serif 700</text>
+<text x="178" y="66" font-family="PT Serif, Georgia, serif" font-size="52" font-weight="700" fill="#1A1714">ОРОМ</text>
+<path d="M28 120h824" stroke="#E3D9CB" stroke-width="1"/>
+<text x="28" y="136" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="600" fill="#9E4A2E">display-2</text>
+<text x="28" y="151" font-family="Inter, Helvetica, sans-serif" font-size="10.5" fill="#7A6E62">56 / 62 · PT Serif 700</text>
+<text x="178" y="144" font-family="PT Serif, Georgia, serif" font-size="40" font-weight="700" fill="#1A1714">Курс восстановления</text>
+<path d="M28 186h824" stroke="#E3D9CB" stroke-width="1"/>
+<text x="28" y="202" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="600" fill="#9E4A2E">h1</text>
+<text x="28" y="217" font-family="Inter, Helvetica, sans-serif" font-size="10.5" fill="#7A6E62">40 / 48 · PT Serif 700</text>
+<text x="178" y="210" font-family="PT Serif, Georgia, serif" font-size="30" font-weight="700" fill="#1A1714">Запись на сеанс</text>
+<path d="M28 242h824" stroke="#E3D9CB" stroke-width="1"/>
+<text x="28" y="258" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="600" fill="#9E4A2E">h2</text>
+<text x="28" y="273" font-family="Inter, Helvetica, sans-serif" font-size="10.5" fill="#7A6E62">32 / 40 · PT Serif 700</text>
+<text x="178" y="266" font-family="PT Serif, Georgia, serif" font-size="25" font-weight="700" fill="#1A1714">Наши мастера</text>
+<path d="M28 293h824" stroke="#E3D9CB" stroke-width="1"/>
+<text x="28" y="309" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="600" fill="#9E4A2E">h3</text>
+<text x="28" y="324" font-family="Inter, Helvetica, sans-serif" font-size="10.5" fill="#7A6E62">24 / 32 · PT Serif 400</text>
+<text x="178" y="317" font-family="PT Serif, Georgia, serif" font-size="20" font-weight="400" fill="#1A1714">Как проходит курс</text>
+<path d="M28 339h824" stroke="#E3D9CB" stroke-width="1"/>
+<text x="28" y="355" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="600" fill="#9E4A2E">h4</text>
+<text x="28" y="370" font-family="Inter, Helvetica, sans-serif" font-size="10.5" fill="#7A6E62">20 / 28 · Inter 600</text>
+<text x="178" y="363" font-family="Inter, Helvetica, sans-serif" font-size="17" font-weight="600" fill="#1A1714">Свободные слоты</text>
+<path d="M28 383h824" stroke="#E3D9CB" stroke-width="1"/>
+<text x="28" y="399" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="600" fill="#9E4A2E">body-lg</text>
+<text x="28" y="414" font-family="Inter, Helvetica, sans-serif" font-size="10.5" fill="#7A6E62">18 / 28 · Inter 400</text>
+<text x="178" y="407" font-family="Inter, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1A1714">Один мастер ведёт курс целиком</text>
+<path d="M28 427h824" stroke="#E3D9CB" stroke-width="1"/>
+<text x="28" y="443" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="600" fill="#9E4A2E">body</text>
+<text x="28" y="458" font-family="Inter, Helvetica, sans-serif" font-size="10.5" fill="#7A6E62">16 / 26 · Inter 400</text>
+<text x="178" y="451" font-family="Inter, Helvetica, sans-serif" font-size="14.5" font-weight="400" fill="#1A1714">Сеанс длится полтора часа, шесть слотов в день</text>
+<path d="M28 471h824" stroke="#E3D9CB" stroke-width="1"/>
+<text x="28" y="487" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="600" fill="#9E4A2E">body-sm</text>
+<text x="28" y="502" font-family="Inter, Helvetica, sans-serif" font-size="10.5" fill="#7A6E62">14 / 22 · Inter 400</text>
+<text x="178" y="495" font-family="Inter, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#1A1714">Воскресенье — выходной день</text>
+<path d="M28 515h824" stroke="#E3D9CB" stroke-width="1"/>
+<text x="28" y="531" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="600" fill="#9E4A2E">caption</text>
+<text x="28" y="546" font-family="Inter, Helvetica, sans-serif" font-size="10.5" fill="#7A6E62">12 / 18 · Inter 400</text>
+<text x="178" y="539" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="400" fill="#1A1714">Маркази массаж ва барқарорсозӣ · Душанбе</text>
+<path d="M28 559h824" stroke="#E3D9CB" stroke-width="1"/>
+<text x="28" y="575" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="600" fill="#9E4A2E">mono</text>
+<text x="28" y="590" font-family="Inter, Helvetica, sans-serif" font-size="10.5" fill="#7A6E62">15 / 24 · JetBrains Mono</text>
+<text x="178" y="583" font-family="JetBrains Mono, monospace" font-size="13.5" font-weight="400" fill="#1A1714">11:00  12:30  14:00  15:30  17:00  18:30</text>
+<path d="M28 603h824" stroke="#E3D9CB" stroke-width="1"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 675" width="540" height="675" role="img" aria-label="Пост: фото и плашка"><title>Образец поста — схема B</title>
+<rect width="540" height="675" fill="#FBF8F3"/>
+<rect width="540" height="439" fill="#DCE9E3"/>
+<text x="270.0" y="215" font-family="Inter, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#2E5A49" text-anchor="middle">фотография: руки мастера на спине</text>
+<text x="270.0" y="240" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#7A6E62" text-anchor="middle">кадрирование 4:5, затемнение не нужно</text>
+<rect y="439" width="540" height="236" fill="#1F3D32"/>
+<text x="32" y="492" font-family="PT Serif, Georgia, serif" font-size="30" font-weight="700" fill="#F4EDE3" text-anchor="start">Спина к вечеру</text>
+<text x="32" y="528" font-family="PT Serif, Georgia, serif" font-size="30" font-weight="700" fill="#F4EDE3" text-anchor="start">каменная?</text>
+<text x="32" y="566" font-family="Inter, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#9CBFB0" text-anchor="start">Курс 10 сеансов с одним мастером.</text>
+<text x="32" y="590" font-family="Inter, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#9CBFB0" text-anchor="start">Первый сеанс — уже завтра в 11:00.</text>
+<rect x="32" y="612" width="186" height="40" rx="12" fill="#C06B4A"/>
+<text x="125" y="638" font-family="Inter, Helvetica, sans-serif" font-size="14" font-weight="500" fill="#FFFFFF" text-anchor="middle">Запись в профиле</text>
+<g fill="none" stroke-linecap="round" transform="translate(444 600) scale(0.5)"><path d="M10 44a22 22 0 0 1 44 0" stroke="#F4EDE3" stroke-width="6"/><path d="M18.5 44a13.5 13.5 0 0 1 27 0" stroke="#9CBFB0" stroke-width="6"/><path d="M27 44a5 5 0 0 1 10 0" stroke="#C06B4A" stroke-width="6"/><path d="M7 51.5h50" stroke="#F4EDE3" stroke-width="6"/></g>
+</svg>

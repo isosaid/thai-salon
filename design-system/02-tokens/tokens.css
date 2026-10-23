@@ -1,0 +1,281 @@
+/* ОРОМ — дизайн-токены v1.0.0
+   Подключается первым, до всех остальных стилей.
+   Синхронизирован с tokens.md и tokens.json. */
+
+:root {
+  /* ─── Бренд ─────────────────────────────────────────── */
+  --brand-name-ru: "ОРОМ";
+  --brand-name-tj: "ОРОМ";
+  --brand-name-en: "OROM";
+  --brand-legal-ru: "Центр массажа и восстановления «ОРОМ»";
+  --brand-tagline-ru: "Тело помнит заботу";
+  --brand-tagline-tj: "Бадан ғамхориро дар ёд дорад";
+  --brand-tagline-en: "The body remembers care";
+  --brand-domain: "orom.tj";
+
+  /* ─── Цвет: примитивы ───────────────────────────────── */
+  --color-forest-900: #14271F;
+  --color-forest-800: #1F3D32;
+  --color-forest-700: #2E5A49;
+  --color-forest-600: #3F7A62;
+  --color-forest-300: #9CBFB0;
+  --color-forest-100: #DCE9E3;
+
+  --color-terra-700: #9E4A2E;
+  --color-terra-600: #B45A38;
+  --color-terra-500: #C06B4A;
+  --color-terra-200: #F0D3C5;
+
+  --color-sand-500: #D8C4A8;
+  --color-sand-300: #EADFD0;
+  --color-sand-100: #F4EDE3;
+  --color-cream:    #FBF8F3;
+
+  --color-ink-900: #1A1714;
+  --color-ink-600: #4A423A;
+  --color-ink-400: #7A6E62;
+  --color-line:    #E3D9CB;
+
+  --color-gold-600:   #C9922F;
+  --color-danger-600: #A33A2C;
+  --color-info-600:   #3C6E8F;
+
+  /* ─── Цвет: семантика ───────────────────────────────── */
+  --bg-page:       var(--color-cream);
+  --bg-surface:    var(--color-sand-100);
+  --bg-surface-2:  var(--color-sand-300);
+  --bg-inverse:    var(--color-forest-800);
+
+  --text-primary:    var(--color-ink-900);
+  --text-secondary:  var(--color-ink-600);
+  --text-muted:      var(--color-ink-400);
+  --text-on-inverse: var(--color-cream);
+  --text-link:       var(--color-forest-700);
+  --text-accent:     var(--color-terra-700);
+
+  --border-default: var(--color-line);
+  --border-strong:  var(--color-sand-500);
+  --border-focus:   var(--color-forest-600);
+
+  --action-primary:       var(--color-forest-700);
+  --action-primary-hover: var(--color-forest-800);
+  --action-accent:        var(--color-terra-600);
+  --action-accent-hover:  var(--color-terra-700);
+
+  --status-success: var(--color-forest-600);
+  --status-warning: var(--color-gold-600);
+  --status-danger:  var(--color-danger-600);
+  --status-info:    var(--color-info-600);
+
+  --segment-corporate:   var(--color-forest-700);
+  --segment-private:     var(--color-terra-600);
+  --segment-certificate: var(--color-gold-600);
+  --segment-child:       var(--color-info-600);
+
+  --slot-free:        var(--color-forest-100);
+  --slot-busy:        var(--color-sand-300);
+  --slot-selected:    var(--color-forest-700);
+  --slot-unavailable: var(--color-sand-100);
+
+  /* ─── Типографика ───────────────────────────────────── */
+  --font-display: "PT Serif", Georgia, serif;
+  --font-text: "Inter", "PT Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --text-display-1: 700 72px/76px var(--font-display);
+  --text-display-2: 700 56px/62px var(--font-display);
+  --text-h1:        700 40px/48px var(--font-display);
+  --text-h2:        700 32px/40px var(--font-display);
+  --text-h3:        400 24px/32px var(--font-display);
+  --text-h4:        600 20px/28px var(--font-text);
+  --text-body-lg:   400 18px/28px var(--font-text);
+  --text-body:      400 16px/26px var(--font-text);
+  --text-body-sm:   400 14px/22px var(--font-text);
+  --text-caption:   400 12px/18px var(--font-text);
+  --text-overline:  600 12px/16px var(--font-text);
+  --text-mono:      400 15px/24px var(--font-mono);
+  --tracking-overline: .08em;
+
+  /* ─── Отступы ───────────────────────────────────────── */
+  --space-1: 4px;   --space-2: 8px;   --space-3: 12px;  --space-4: 16px;
+  --space-5: 20px;  --space-6: 24px;  --space-8: 32px;  --space-10: 40px;
+  --space-12: 48px; --space-16: 64px; --space-20: 80px; --space-24: 96px;
+  --space-32: 128px;
+
+  /* ─── Радиусы ───────────────────────────────────────── */
+  --radius-none: 0;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  /* ─── Тени ──────────────────────────────────────────── */
+  --shadow-xs: 0 1px 2px rgba(26,23,20,.06);
+  --shadow-sm: 0 2px 8px rgba(26,23,20,.07);
+  --shadow-md: 0 8px 24px rgba(26,23,20,.09);
+  --shadow-lg: 0 20px 48px rgba(26,23,20,.12);
+
+  /* ─── Движение ──────────────────────────────────────── */
+  --duration-instant: 80ms;
+  --duration-fast: 160ms;
+  --duration-base: 240ms;
+  --duration-slow: 360ms;
+  --duration-page: 480ms;
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-in: cubic-bezier(.64, 0, .78, 0);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+
+  /* ─── Сетка ─────────────────────────────────────────── */
+  --container-max: 1200px;
+  --container-text: 720px;
+  --grid-columns: 12;
+  --grid-gutter: var(--space-6);
+  --z-sticky: 100; --z-dropdown: 200; --z-overlay: 300;
+  --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
+
+  /* Брейкпойнты. CSS не подставляет переменные в @media — значения
+     продублированы в медиазапросах ниже; эти токены для JS и документации. */
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 900px;
+  --breakpoint-lg: 1280px;
+  --breakpoint-xl: 1600px;
+
+  /* ─── Бизнес-константы центра ───────────────────────── */
+  --session-duration-min: 90;
+  --slots-per-day: 6;
+  --rooms-count: 3;
+  --course-default-sessions: 10;
+  --daily-capacity: 18;
+  --slot-times: "11:00, 12:30, 14:00, 15:30, 17:00, 18:30";
+  --closed-weekday: "sunday";
+}
+
+/* ─── Тёмная тема ─────────────────────────────────────── */
+:root[data-theme="dark"] {
+  --bg-page:      #101D18;
+  --bg-surface:   #16281F;
+  --bg-surface-2: #1F3D32;
+  --bg-inverse:   #0A1510;
+
+  --text-primary:   #EFE7DB;
+  --text-secondary: #B3A897;
+  --text-muted:     #8C8375;
+
+  --border-default: #2A4035;
+  --border-strong:  #3A5648;
+
+  --action-primary:       #4E9478;
+  --action-primary-hover: #5CA587;
+  --action-accent:        #D47B55;
+  --action-accent-hover:  #E08C66;
+
+  --slot-free:        #1E3B2F;
+  --slot-busy:        #22302A;
+  --slot-unavailable: #16281F;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-page:      #101D18;
+    --bg-surface:   #16281F;
+    --bg-surface-2: #1F3D32;
+    --bg-inverse:   #0A1510;
+    --text-primary:   #EFE7DB;
+    --text-secondary: #B3A897;
+    --text-muted:     #8C8375;
+    --border-default: #2A4035;
+    --border-strong:  #3A5648;
+    --action-primary:       #4E9478;
+    --action-primary-hover: #5CA587;
+    --action-accent:        #D47B55;
+    --action-accent-hover:  #E08C66;
+    --slot-free:        #1E3B2F;
+    --slot-busy:        #22302A;
+    --slot-unavailable: #16281F;
+  }
+}
+
+/* ─── Мобильная шкала ─────────────────────────────────── */
+@media (max-width: 599px) {
+  :root {
+    --text-display-1: 700 40px/46px var(--font-display);
+    --text-display-2: 700 32px/40px var(--font-display);
+    --text-h1:        700 28px/36px var(--font-display);
+    --text-h2:        700 24px/32px var(--font-display);
+    --text-h3:        400 20px/28px var(--font-display);
+  }
+}
+
+/* ─── Уважение к настройке движения ───────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ─── Палитра графиков ────────────────────────────────────
+   Отдельная от интерфейсной: цвета UI в графиках читаются как серые.
+   Порядок категориальных цветов фиксирован и не циклится.
+   Проверено: полоса светлоты, порог цветности, различимость при
+   протанопии/дейтеранопии/тританопии, контраст к поверхности.
+   #C9922F даёт 2,6:1 к --color-cream — обязательны видимые подписи
+   значений или доступная таблица с теми же данными.               */
+:root {
+  --chart-cat-1: #0E7A55;  /* корпоративный пакет */
+  --chart-cat-2: #C9922F;  /* сертификат */
+  --chart-cat-3: #2A6DA8;  /* детская программа */
+  --chart-cat-4: #B45A38;  /* частный клиент */
+
+  --chart-seq-1: #7DB992;
+  --chart-seq-2: #59A375;
+  --chart-seq-3: #378C5B;
+  --chart-seq-4: #227347;
+  --chart-seq-5: #195936;
+
+  --chart-grid: var(--color-line);
+  --chart-surface: var(--color-cream);
+  --chart-mark-width: 2px;
+  --chart-mark-radius: 4px;
+  --chart-gap: 2px;
+}
+:root[data-theme="dark"] {
+  --chart-cat-1: #298954;
+  --chart-cat-2: #B18D2A;
+  --chart-cat-3: #488ACB;
+  --chart-cat-4: #BB6543;
+  --chart-surface: #101D18;
+  --chart-grid: #2A4035;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --chart-cat-1: #298954;
+    --chart-cat-2: #B18D2A;
+    --chart-cat-3: #488ACB;
+    --chart-cat-4: #BB6543;
+    --chart-surface: #101D18;
+    --chart-grid: #2A4035;
+  }
+}
+
+/* ─── База ────────────────────────────────────────────── */
+body {
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font: var(--text-body);
+  -webkit-font-smoothing: antialiased;
+}
+:where(h1) { font: var(--text-h1); }
+:where(h2) { font: var(--text-h2); }
+:where(h3) { font: var(--text-h3); }
+:where(a)  { color: var(--text-link); }
+:where(:focus-visible) {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+:where([lang="ru"], [lang="tg"]) p { hyphens: auto; }
+:where(table, .tabular) { font-variant-numeric: tabular-nums; }

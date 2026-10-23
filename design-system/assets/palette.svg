@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 1140" width="860" height="1140" role="img" aria-label="Палитра ОРОМ">
+<title>Палитра ОРОМ</title>
+<rect width="860" height="1140" fill="#FBF8F3"/>
+<text x="28" y="38" font-family="PT Serif, Georgia, serif" font-size="19" font-weight="700" fill="#1F3D32">Лесной — основа бренда</text>
+<rect x="28" y="56" width="150" height="34" rx="6" fill="#14271F" stroke="#E3D9CB"/>
+<text x="192" y="71" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-forest-900</text>
+<text x="192" y="86" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#14271F · текст на светлом, максимальный контраст</text>
+<rect x="28" y="102" width="150" height="34" rx="6" fill="#1F3D32" stroke="#E3D9CB"/>
+<text x="192" y="117" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-forest-800</text>
+<text x="192" y="132" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#1F3D32 · логотип, заголовки, тёмные полотна</text>
+<rect x="28" y="148" width="150" height="34" rx="6" fill="#2E5A49" stroke="#E3D9CB"/>
+<text x="192" y="163" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-forest-700</text>
+<text x="192" y="178" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#2E5A49 · основная кнопка, ссылки</text>
+<rect x="28" y="194" width="150" height="34" rx="6" fill="#3F7A62" stroke="#E3D9CB"/>
+<text x="192" y="209" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-forest-600</text>
+<text x="192" y="224" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#3F7A62 · успех, прогресс курса</text>
+<rect x="28" y="240" width="150" height="34" rx="6" fill="#9CBFB0" stroke="#E3D9CB"/>
+<text x="192" y="255" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-forest-300</text>
+<text x="192" y="270" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#9CBFB0 · линии на тёмном, иллюстрации</text>
+<rect x="28" y="286" width="150" height="34" rx="6" fill="#DCE9E3" stroke="#E3D9CB"/>
+<text x="192" y="301" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-forest-100</text>
+<text x="192" y="316" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#DCE9E3 · подложка блока</text>
+<text x="28" y="346" font-family="PT Serif, Georgia, serif" font-size="19" font-weight="700" fill="#1F3D32">Терракота — акцент</text>
+<rect x="28" y="364" width="150" height="34" rx="6" fill="#9E4A2E" stroke="#E3D9CB"/>
+<text x="192" y="379" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-terra-700</text>
+<text x="192" y="394" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#9E4A2E · акцентный текст на светлом</text>
+<rect x="28" y="410" width="150" height="34" rx="6" fill="#B45A38" stroke="#E3D9CB"/>
+<text x="192" y="425" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-terra-600</text>
+<text x="192" y="440" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#B45A38 · кнопка-акцент, бейдж</text>
+<rect x="28" y="456" width="150" height="34" rx="6" fill="#C06B4A" stroke="#E3D9CB"/>
+<text x="192" y="471" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-terra-500</text>
+<text x="192" y="486" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#C06B4A · крупный акцент, графика</text>
+<rect x="28" y="502" width="150" height="34" rx="6" fill="#F0D3C5" stroke="#E3D9CB"/>
+<text x="192" y="517" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-terra-200</text>
+<text x="192" y="532" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#F0D3C5 · мягкая подложка акцента</text>
+<text x="28" y="562" font-family="PT Serif, Georgia, serif" font-size="19" font-weight="700" fill="#1F3D32">Песок — поверхности</text>
+<rect x="28" y="580" width="150" height="34" rx="6" fill="#FBF8F3" stroke="#E3D9CB"/>
+<text x="192" y="595" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-cream</text>
+<text x="192" y="610" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#FBF8F3 · основной фон</text>
+<rect x="28" y="626" width="150" height="34" rx="6" fill="#F4EDE3" stroke="#E3D9CB"/>
+<text x="192" y="641" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-sand-100</text>
+<text x="192" y="656" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#F4EDE3 · карточка, второй уровень</text>
+<rect x="28" y="672" width="150" height="34" rx="6" fill="#EADFD0" stroke="#E3D9CB"/>
+<text x="192" y="687" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-sand-300</text>
+<text x="192" y="702" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#EADFD0 · разделитель блоков</text>
+<rect x="28" y="718" width="150" height="34" rx="6" fill="#D8C4A8" stroke="#E3D9CB"/>
+<text x="192" y="733" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-sand-500</text>
+<text x="192" y="748" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#D8C4A8 · рамка документа, печать</text>
+<text x="28" y="778" font-family="PT Serif, Georgia, serif" font-size="19" font-weight="700" fill="#1F3D32">Чернила и служебные</text>
+<rect x="28" y="796" width="150" height="34" rx="6" fill="#1A1714" stroke="#E3D9CB"/>
+<text x="192" y="811" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-ink-900</text>
+<text x="192" y="826" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#1A1714 · основной текст</text>
+<rect x="28" y="842" width="150" height="34" rx="6" fill="#4A423A" stroke="#E3D9CB"/>
+<text x="192" y="857" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-ink-600</text>
+<text x="192" y="872" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#4A423A · второй уровень текста</text>
+<rect x="28" y="888" width="150" height="34" rx="6" fill="#7A6E62" stroke="#E3D9CB"/>
+<text x="192" y="903" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-ink-400</text>
+<text x="192" y="918" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#7A6E62 · подписи, мета</text>
+<rect x="28" y="934" width="150" height="34" rx="6" fill="#E3D9CB" stroke="#E3D9CB"/>
+<text x="192" y="949" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-line</text>
+<text x="192" y="964" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#E3D9CB · границы, таблицы</text>
+<rect x="28" y="980" width="150" height="34" rx="6" fill="#C9922F" stroke="#E3D9CB"/>
+<text x="192" y="995" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-gold-600</text>
+<text x="192" y="1010" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#C9922F · предупреждение, сертификат</text>
+<rect x="28" y="1026" width="150" height="34" rx="6" fill="#A33A2C" stroke="#E3D9CB"/>
+<text x="192" y="1041" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-danger-600</text>
+<text x="192" y="1056" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#A33A2C · ошибка, отмена сеанса</text>
+<rect x="28" y="1072" width="150" height="34" rx="6" fill="#3C6E8F" stroke="#E3D9CB"/>
+<text x="192" y="1087" font-family="Inter, Helvetica, sans-serif" font-size="13.5" font-weight="600" fill="#1A1714">--color-info-600</text>
+<text x="192" y="1102" font-family="Inter, Helvetica, sans-serif" font-size="12" fill="#7A6E62">#3C6E8F · информация, детская программа</text>
+</svg>

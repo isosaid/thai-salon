@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 675" width="540" height="675" role="img" aria-label="Пост: свободные слоты на неделе"><title>Образец поста — схема C</title>
+<rect width="540" height="675" fill="#F4EDE3"/>
+<text x="32" y="60" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#9E4A2E" text-anchor="start" letter-spacing="2">СВОБОДНО НА ЭТОЙ НЕДЕЛЕ</text>
+<text x="32" y="104" font-family="PT Serif, Georgia, serif" font-size="28" font-weight="700" fill="#1F3D32" text-anchor="start">Дневное время —</text>
+<text x="32" y="138" font-family="PT Serif, Georgia, serif" font-size="28" font-weight="700" fill="#1F3D32" text-anchor="start">спокойнее и свободнее</text>
+<text x="32" y="216" font-family="Inter, Helvetica, sans-serif" font-size="17" font-weight="600" fill="#4A423A" text-anchor="start">Пн</text>
+<rect x="86" y="190" width="92" height="38" rx="19" fill="#DCE9E3" stroke="#E3D9CB"/>
+<text x="132" y="215" font-family="JetBrains Mono, monospace" font-size="16" font-weight="400" fill="#1A1714" text-anchor="middle">11:00</text>
+<rect x="188" y="190" width="92" height="38" rx="19" fill="#DCE9E3" stroke="#E3D9CB"/>
+<text x="234" y="215" font-family="JetBrains Mono, monospace" font-size="16" font-weight="400" fill="#1A1714" text-anchor="middle">15:30</text>
+<text x="32" y="268" font-family="Inter, Helvetica, sans-serif" font-size="17" font-weight="600" fill="#4A423A" text-anchor="start">Вт</text>
+<rect x="86" y="242" width="92" height="38" rx="19" fill="#DCE9E3" stroke="#E3D9CB"/>
+<text x="132" y="267" font-family="JetBrains Mono, monospace" font-size="16" font-weight="400" fill="#1A1714" text-anchor="middle">15:30</text>
+<text x="32" y="320" font-family="Inter, Helvetica, sans-serif" font-size="17" font-weight="600" fill="#4A423A" text-anchor="start">Ср</text>
+<rect x="86" y="294" width="92" height="38" rx="19" fill="#DCE9E3" stroke="#E3D9CB"/>
+<text x="132" y="319" font-family="JetBrains Mono, monospace" font-size="16" font-weight="400" fill="#1A1714" text-anchor="middle">11:00</text>
+<rect x="188" y="294" width="92" height="38" rx="19" fill="#DCE9E3" stroke="#E3D9CB"/>
+<text x="234" y="319" font-family="JetBrains Mono, monospace" font-size="16" font-weight="400" fill="#1A1714" text-anchor="middle">14:00</text>
+<text x="32" y="372" font-family="Inter, Helvetica, sans-serif" font-size="17" font-weight="600" fill="#4A423A" text-anchor="start">Чт</text>
+<rect x="86" y="346" width="92" height="38" rx="19" fill="#DCE9E3" stroke="#E3D9CB"/>
+<text x="132" y="371" font-family="JetBrains Mono, monospace" font-size="16" font-weight="400" fill="#1A1714" text-anchor="middle">15:30</text>
+<rect x="188" y="346" width="92" height="38" rx="19" fill="#DCE9E3" stroke="#E3D9CB"/>
+<text x="234" y="371" font-family="JetBrains Mono, monospace" font-size="16" font-weight="400" fill="#1A1714" text-anchor="middle">18:30</text>
+<text x="32" y="424" font-family="Inter, Helvetica, sans-serif" font-size="17" font-weight="600" fill="#4A423A" text-anchor="start">Пт</text>
+<rect x="86" y="398" width="92" height="38" rx="19" fill="#DCE9E3" stroke="#E3D9CB"/>
+<text x="132" y="423" font-family="JetBrains Mono, monospace" font-size="16" font-weight="400" fill="#1A1714" text-anchor="middle">15:30</text>
+<text x="32" y="476" font-family="Inter, Helvetica, sans-serif" font-size="17" font-weight="600" fill="#4A423A" text-anchor="start">Сб</text>
+<rect x="86" y="450" width="92" height="38" rx="19" fill="#DCE9E3" stroke="#E3D9CB"/>
+<text x="132" y="475" font-family="JetBrains Mono, monospace" font-size="16" font-weight="400" fill="#1A1714" text-anchor="middle">11:00</text>
+<rect x="32" y="512" width="80" height="3" fill="#C06B4A"/>
+<text x="32" y="556" font-family="Inter, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#4A423A" text-anchor="start">Запись по ссылке в профиле</text>
+<text x="32" y="580" font-family="Inter, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#7A6E62" text-anchor="start">или по телефону — ответим за минуту</text>
+<g fill="none" stroke-linecap="round" transform="translate(436 579) scale(0.55)"><path d="M10 44a22 22 0 0 1 44 0" stroke="#1F3D32" stroke-width="4.5"/><path d="M18.5 44a13.5 13.5 0 0 1 27 0" stroke="#2E5A49" stroke-width="4.5"/><path d="M27 44a5 5 0 0 1 10 0" stroke="#C06B4A" stroke-width="4.5"/><path d="M7 51.5h50" stroke="#1F3D32" stroke-width="4.5"/></g>
+</svg>

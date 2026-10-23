@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 675" width="540" height="675" role="img" aria-label="Пост: курс из десяти сеансов"><title>Образец поста — схема A</title>
+<rect width="540" height="675" fill="#FBF8F3"/>
+<text x="32" y="66" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#9E4A2E" text-anchor="start" letter-spacing="2">ВОССТАНОВЛЕНИЕ</text>
+<text x="32" y="130" font-family="PT Serif, Georgia, serif" font-size="40" font-weight="700" fill="#1F3D32" text-anchor="start">Курс из десяти</text>
+<text x="32" y="178" font-family="PT Serif, Georgia, serif" font-size="40" font-weight="700" fill="#1F3D32" text-anchor="start">сеансов</text>
+<text x="32" y="226" font-family="PT Serif, Georgia, serif" font-size="40" font-weight="700" fill="#1F3D32" text-anchor="start">за три недели</text>
+<rect x="32" y="300" width="80" height="3" fill="#C06B4A"/>
+<text x="32" y="344" font-family="Inter, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#4A423A" text-anchor="start">Один мастер ведёт курс</text>
+<text x="32" y="371" font-family="Inter, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#4A423A" text-anchor="start">от первого до последнего</text>
+<text x="32" y="398" font-family="Inter, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#4A423A" text-anchor="start">сеанса. Время закреплено</text>
+<text x="32" y="425" font-family="Inter, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#4A423A" text-anchor="start">на весь курс.</text>
+<text x="32" y="500" font-family="JetBrains Mono, monospace" font-size="14" font-weight="400" fill="#7A6E62" text-anchor="start">11:00 · 12:30 · 14:00 · 15:30 · 17:00 · 18:30</text>
+<text x="32" y="524" font-family="Inter, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#7A6E62" text-anchor="start">Пн–Сб · Душанбе</text>
+<g fill="none" stroke-linecap="round" transform="translate(28 580) scale(0.62)"><path d="M10 44a22 22 0 0 1 44 0" stroke="#1F3D32" stroke-width="4.5"/><path d="M18.5 44a13.5 13.5 0 0 1 27 0" stroke="#2E5A49" stroke-width="4.5"/><path d="M27 44a5 5 0 0 1 10 0" stroke="#C06B4A" stroke-width="4.5"/><path d="M7 51.5h50" stroke="#1F3D32" stroke-width="4.5"/></g>
+<text x="508" y="622" font-family="Inter, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#7A6E62" text-anchor="end">orom.tj</text>
+<text x="508" y="640" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#9E4A2E" text-anchor="end">Тело помнит заботу</text>
+</svg>

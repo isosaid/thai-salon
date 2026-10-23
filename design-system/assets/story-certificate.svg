@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 711" width="400" height="711" role="img" aria-label="Сторис: сертификат"><title>Образец сторис</title>
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBF8F3"/><stop offset="1" stop-color="#EADFD0"/></linearGradient></defs>
+<rect width="400" height="711" fill="url(#g)"/>
+<rect x="0" y="0" width="400" height="67" fill="#1F3D32" opacity="0.06"/>
+<text x="200.0" y="52" font-family="Inter, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#7A6E62" text-anchor="middle">верхние 180 px — интерфейс площадки</text>
+<text x="200.0" y="130" font-family="Inter, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#9E4A2E" text-anchor="middle" letter-spacing="2.5">ПОДАРОК</text>
+<text x="200.0" y="180" font-family="PT Serif, Georgia, serif" font-size="34" font-weight="700" fill="#1F3D32" text-anchor="middle">Сертификат</text>
+<text x="200.0" y="220" font-family="PT Serif, Georgia, serif" font-size="34" font-weight="700" fill="#1F3D32" text-anchor="middle">на курс</text>
+<rect x="60" y="250" width="280" height="150" rx="10" fill="#FBF8F3" stroke="#D8C4A8" stroke-width="2"/>
+<rect x="70" y="260" width="260" height="130" rx="6" fill="none" stroke="#C9922F" stroke-width="1"/>
+<text x="200.0" y="300" font-family="Inter, Helvetica, sans-serif" font-size="10" font-weight="600" fill="#9E4A2E" text-anchor="middle" letter-spacing="2">СЕРТИФИКАТ</text>
+<text x="200.0" y="330" font-family="PT Serif, Georgia, serif" font-size="15" font-weight="700" fill="#1A1714" text-anchor="middle">на курс из 10 сеансов</text>
+<text x="200.0" y="354" font-family="Inter, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#7A6E62" text-anchor="middle">действует 6 месяцев</text>
+<g fill="none" stroke-linecap="round" transform="translate(182.0 358) scale(0.38)"><path d="M10 44a22 22 0 0 1 44 0" stroke="#1F3D32" stroke-width="4.5"/><path d="M18.5 44a13.5 13.5 0 0 1 27 0" stroke="#2E5A49" stroke-width="4.5"/><path d="M27 44a5 5 0 0 1 10 0" stroke="#C06B4A" stroke-width="4.5"/><path d="M7 51.5h50" stroke="#1F3D32" stroke-width="4.5"/></g>
+<text x="200.0" y="448" font-family="Inter, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#4A423A" text-anchor="middle">Получатель сам выбирает</text>
+<text x="200.0" y="470" font-family="Inter, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#4A423A" text-anchor="middle">мастера и время</text>
+<rect x="100" y="506" width="200" height="44" rx="22" fill="#2E5A49"/>
+<text x="200.0" y="534" font-family="Inter, Helvetica, sans-serif" font-size="15" font-weight="500" fill="#FBF8F3" text-anchor="middle">Оформить</text>
+<rect x="0" y="592" width="400" height="119" fill="#A33A2C" opacity="0.05"/>
+<text x="200.0" y="650" font-family="Inter, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#7A6E62" text-anchor="middle">нижние 320 px — ничего важного</text>
+<text x="200.0" y="666" font-family="Inter, Helvetica, sans-serif" font-size="9" font-weight="400" fill="#7A6E62" text-anchor="middle">здесь кнопка «ответить» площадки</text>
+</svg>

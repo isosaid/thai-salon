@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Монограмма"><title>Монограмма</title>
+<rect width="64" height="64" rx="16" fill="#1F3D32"/>
+<g transform="translate(32 32) scale(0.64) translate(-32 -32)"><g fill="none" stroke-linecap="round" stroke-width="3.6"><path d="M7 22C20 12 44 32 57 22" stroke="#F4EDE3"/><path d="M7 33C20 23 44 43 57 33" stroke="#9CBFB0"/><path d="M7 44C20 34 44 54 57 44" stroke="#F4EDE3"/></g><circle cx="32" cy="33" r="5" fill="#C06B4A"/></g>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 556" width="920" height="556" role="img" aria-label="Дашборд загрузки центра ОРОМ">
+<title>Дашборд загрузки центра</title><rect width="920" height="556" fill="#FBF8F3"/>
+<text x="28" y="40" font-family="PT Serif, Georgia, serif" font-size="22" font-weight="700" fill="#1F3D32" text-anchor="start">Загрузка центра · октябрь 2026</text>
+<text x="892" y="40" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#7A6E62" text-anchor="end">27 рабочих дней · 3 кабинета · 6 слотов</text>
+<rect x="28" y="64" width="204" height="104" rx="20" fill="#F4EDE3"/>
+<text x="48" y="90" font-family="Inter, Helvetica, sans-serif" font-size="10" font-weight="600" fill="#9E4A2E" text-anchor="start" letter-spacing="1.2">ЗАГРУЗКА МЕСЯЦА</text>
+<text x="48" y="130" font-family="PT Serif, Georgia, serif" font-size="30" font-weight="700" fill="#1A1714" text-anchor="start">48,8 %</text>
+<text x="48" y="152" font-family="Inter, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#7A6E62" text-anchor="start">237 из 486 сеансов</text>
+<rect x="248" y="64" width="204" height="104" rx="20" fill="#F4EDE3"/>
+<text x="268.0" y="90" font-family="Inter, Helvetica, sans-serif" font-size="10" font-weight="600" fill="#9E4A2E" text-anchor="start" letter-spacing="1.2">АКТИВНЫХ КУРСОВ</text>
+<text x="268.0" y="130" font-family="PT Serif, Georgia, serif" font-size="30" font-weight="700" fill="#1A1714" text-anchor="start">29</text>
+<text x="268.0" y="152" font-family="Inter, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#7A6E62" text-anchor="start">из 437 клиентов в базе</text>
+<rect x="468" y="64" width="204" height="104" rx="20" fill="#F4EDE3"/>
+<text x="488.0" y="90" font-family="Inter, Helvetica, sans-serif" font-size="10" font-weight="600" fill="#9E4A2E" text-anchor="start" letter-spacing="1.2">САМЫЙ СЛАБЫЙ СЛОТ</text>
+<text x="488.0" y="130" font-family="PT Serif, Georgia, serif" font-size="30" font-weight="700" fill="#1A1714" text-anchor="start">15:30</text>
+<text x="488.0" y="152" font-family="Inter, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#7A6E62" text-anchor="start">заполнен на 23,5 %</text>
+<rect x="688" y="64" width="204" height="104" rx="20" fill="#F4EDE3"/>
+<text x="708.0" y="90" font-family="Inter, Helvetica, sans-serif" font-size="10" font-weight="600" fill="#9E4A2E" text-anchor="start" letter-spacing="1.2">КОНТАКТ ИЗВЕСТЕН</text>
+<text x="708.0" y="130" font-family="PT Serif, Georgia, serif" font-size="30" font-weight="700" fill="#1A1714" text-anchor="start">28 %</text>
+<text x="708.0" y="152" font-family="Inter, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#7A6E62" text-anchor="start">123 из 437</text>
+<text x="28" y="202" font-family="Inter, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#1A1714" text-anchor="start">Слот 15:30 заполнен на 23,5 % — это структурный провал</text>
+<text x="28" y="222" font-family="Inter, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#7A6E62" text-anchor="start">заполняемость по слотам, % от ёмкости слота</text>
+<text x="28" y="253" font-family="JetBrains Mono, monospace" font-size="13" font-weight="400" fill="#4A423A" text-anchor="start">11:00</text>
+<rect x="92" y="240" width="470" height="18" rx="4" fill="#FBF8F3" stroke="#E3D9CB"/>
+<rect x="92" y="240" width="290.0" height="18" rx="4" fill="#378C5B"/>
+<text x="391.99" y="253" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#4A423A" text-anchor="start" font-variant-numeric="tabular-nums">61,7 %</text>
+<text x="28" y="279" font-family="JetBrains Mono, monospace" font-size="13" font-weight="400" fill="#4A423A" text-anchor="start">12:30</text>
+<rect x="92" y="266" width="470" height="18" rx="4" fill="#FBF8F3" stroke="#E3D9CB"/>
+<rect x="92" y="266" width="267.0" height="18" rx="4" fill="#378C5B"/>
+<text x="368.96" y="279" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#4A423A" text-anchor="start" font-variant-numeric="tabular-nums">56,8 %</text>
+<text x="28" y="305" font-family="JetBrains Mono, monospace" font-size="13" font-weight="400" fill="#4A423A" text-anchor="start">14:00</text>
+<rect x="92" y="292" width="470" height="18" rx="4" fill="#FBF8F3" stroke="#E3D9CB"/>
+<rect x="92" y="292" width="180.0" height="18" rx="4" fill="#378C5B"/>
+<text x="282.01" y="305" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#4A423A" text-anchor="start" font-variant-numeric="tabular-nums">38,3 %</text>
+<text x="28" y="331" font-family="JetBrains Mono, monospace" font-size="13" font-weight="400" fill="#4A423A" text-anchor="start">15:30</text>
+<rect x="92" y="318" width="470" height="18" rx="4" fill="#FBF8F3" stroke="#E3D9CB"/>
+<rect x="92" y="318" width="110.5" height="18" rx="4" fill="#C9922F"/>
+<text x="212.45" y="331" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#4A423A" text-anchor="start" font-variant-numeric="tabular-nums">23,5 %</text>
+<text x="264.45" y="331" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="600" fill="#9E4A2E" text-anchor="start">← провал</text>
+<text x="28" y="357" font-family="JetBrains Mono, monospace" font-size="13" font-weight="400" fill="#4A423A" text-anchor="start">17:00</text>
+<rect x="92" y="344" width="470" height="18" rx="4" fill="#FBF8F3" stroke="#E3D9CB"/>
+<rect x="92" y="344" width="267.0" height="18" rx="4" fill="#378C5B"/>
+<text x="368.96" y="357" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#4A423A" text-anchor="start" font-variant-numeric="tabular-nums">56,8 %</text>
+<text x="28" y="383" font-family="JetBrains Mono, monospace" font-size="13" font-weight="400" fill="#4A423A" text-anchor="start">18:30</text>
+<rect x="92" y="370" width="470" height="18" rx="4" fill="#FBF8F3" stroke="#E3D9CB"/>
+<rect x="92" y="370" width="261.3" height="18" rx="4" fill="#378C5B"/>
+<text x="363.32" y="383" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#4A423A" text-anchor="start" font-variant-numeric="tabular-nums">55,6 %</text>
+<text x="640" y="212" font-family="Inter, Helvetica, sans-serif" font-size="14" font-weight="600" fill="#1A1714" text-anchor="start">Разброс кабинетов — 37,6 п.п.</text>
+<text x="640" y="228" font-family="Inter, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#7A6E62" text-anchor="start">клиенты идут к мастеру, а не в центр</text>
+<text x="640" y="263" font-family="Inter, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#4A423A" text-anchor="start">Ели</text>
+<rect x="686" y="250" width="170" height="18" rx="4" fill="#FBF8F3" stroke="#E3D9CB"/>
+<rect x="686" y="250" width="121.7" height="18" rx="4" fill="#227347"/>
+<text x="815.72" y="263" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#4A423A" text-anchor="start" font-variant-numeric="tabular-nums">71,6 %</text>
+<text x="640" y="293" font-family="Inter, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#4A423A" text-anchor="start">Нам</text>
+<rect x="686" y="280" width="170" height="18" rx="4" fill="#FBF8F3" stroke="#E3D9CB"/>
+<rect x="686" y="280" width="69.2" height="18" rx="4" fill="#227347"/>
+<text x="763.19" y="293" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#4A423A" text-anchor="start" font-variant-numeric="tabular-nums">40,7 %</text>
+<text x="640" y="323" font-family="Inter, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#4A423A" text-anchor="start">НОЙ</text>
+<rect x="686" y="310" width="170" height="18" rx="4" fill="#FBF8F3" stroke="#E3D9CB"/>
+<rect x="686" y="310" width="57.8" height="18" rx="4" fill="#227347"/>
+<text x="751.8" y="323" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#4A423A" text-anchor="start" font-variant-numeric="tabular-nums">34,0 %</text>
+<text x="640" y="354" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="400" fill="#9E4A2E" text-anchor="start">НОЙ сегодня простаивает две трети времени</text>
+<text x="28" y="414" font-family="Inter, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#1A1714" text-anchor="start">Структура сеансов: 94 % даёт корпоратив</text>
+<text x="28" y="432" font-family="Inter, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#7A6E62" text-anchor="start">237 сеансов за месяц по сегментам</text>
+<rect x="28.0" y="448" width="337.0" height="34" rx="4" fill="#0E7A55"/>
+<text x="40" y="470" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="start">Альфа Групп · 93</text>
+<rect x="367.0" y="448" width="300.6" height="34" rx="4" fill="#C9922F"/>
+<text x="379.0379746835443" y="470" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="start">Бета Трейд · 83</text>
+<rect x="669.6" y="448" width="202.2" height="34" rx="4" fill="#2A6DA8"/>
+<text x="681.620253164557" y="470" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="start">ГЭМ · 56</text>
+<rect x="873.8" y="448" width="18.2" height="34" rx="4" fill="#B45A38"/>
+<rect x="28" y="495" width="11" height="11" rx="3" fill="#0E7A55"/>
+<text x="46" y="504" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="400" fill="#4A423A" text-anchor="start">Альфа Групп — 93</text>
+<rect x="164.4" y="495" width="11" height="11" rx="3" fill="#C9922F"/>
+<text x="182.4" y="504" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="400" fill="#4A423A" text-anchor="start">Бета Трейд — 83</text>
+<rect x="293.6" y="495" width="11" height="11" rx="3" fill="#2A6DA8"/>
+<text x="311.6" y="504" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="400" fill="#4A423A" text-anchor="start">ГЭМ — 56</text>
+<rect x="392" y="495" width="11" height="11" rx="3" fill="#B45A38"/>
+<text x="410" y="504" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="400" fill="#4A423A" text-anchor="start">Дети — 5</text>
+<text x="28" y="530" font-family="Inter, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#7A6E62" text-anchor="start">Дети · 5 сеансов подписаны в легенде: сегмент слишком узкий для подписи внутри полосы</text>
+</svg>

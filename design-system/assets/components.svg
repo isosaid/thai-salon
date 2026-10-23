@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 710" width="900" height="710" role="img" aria-label="Компоненты ОРОМ">
+<title>Компоненты ОРОМ</title><rect width="900" height="710" fill="#FBF8F3"/>
+<text x="28" y="36" font-family="PT Serif, Georgia, serif" font-size="20" font-weight="700" fill="#1F3D32" text-anchor="start">Компоненты · базовый набор</text>
+<text x="28" y="70" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#9E4A2E" text-anchor="start" letter-spacing="1.5">КНОПКИ</text>
+<rect x="28" y="88" width="118" height="44" rx="12" fill="#B45A38"/>
+<text x="87.0" y="116" font-family="Inter, Helvetica, sans-serif" font-size="14" font-weight="500" fill="#FFFFFF" text-anchor="middle">Записаться</text>
+<rect x="160.0" y="88" width="143" height="44" rx="12" fill="#2E5A49"/>
+<text x="231.3" y="116" font-family="Inter, Helvetica, sans-serif" font-size="14" font-weight="500" fill="#FBF8F3" text-anchor="middle">Выбрать время</text>
+<rect x="316.6" y="88" width="110" height="44" rx="12" fill="#FBF8F3" stroke="#E3D9CB"/>
+<text x="371.5" y="116" font-family="Inter, Helvetica, sans-serif" font-size="14" font-weight="500" fill="#1A1714" text-anchor="middle">Подробнее</text>
+<rect x="440.40000000000003" y="88" width="151" height="44" rx="12" fill="#FBF8F3" stroke="#A33A2C"/>
+<text x="515.8000000000001" y="116" font-family="Inter, Helvetica, sans-serif" font-size="14" font-weight="500" fill="#A33A2C" text-anchor="middle">Отменить сеанс</text>
+<text x="28" y="148" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="400" fill="#7A6E62" text-anchor="start">accent · primary · secondary · danger   —   высота 44 px, радиус 12, одна акцентная на экран</text>
+<text x="28" y="182" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#9E4A2E" text-anchor="start" letter-spacing="1.5">СЛОТЫ ВРЕМЕНИ</text>
+<rect x="28" y="202" width="110" height="58" rx="12" fill="#DCE9E3" stroke="#E3D9CB" stroke-width="1"/>
+<text x="83" y="228" font-family="JetBrains Mono, monospace" font-size="16" font-weight="400" fill="#1A1714" text-anchor="middle">11:00</text>
+<text x="83" y="246" font-family="Inter, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1A1714" text-anchor="middle">Нам · 1,5ч</text>
+<text x="83" y="278" font-family="Inter, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#7A6E62" text-anchor="middle">free</text>
+<rect x="152" y="202" width="110" height="58" rx="12" fill="#2E5A49" stroke="#2E5A49" stroke-width="1"/>
+<text x="207" y="228" font-family="JetBrains Mono, monospace" font-size="16" font-weight="400" fill="#FBF8F3" text-anchor="middle">12:30</text>
+<text x="207" y="246" font-family="Inter, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#FBF8F3" text-anchor="middle">Ели · 1,5ч</text>
+<text x="207" y="278" font-family="Inter, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#7A6E62" text-anchor="middle">selected</text>
+<path d="M240 216l4 4 7-7" stroke="#FBF8F3" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="276" y="202" width="110" height="58" rx="12" fill="#EADFD0"/>
+<text x="331" y="228" font-family="JetBrains Mono, monospace" font-size="16" font-weight="400" fill="#7A6E62" text-anchor="middle">14:00</text>
+<text x="331" y="246" font-family="Inter, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#7A6E62" text-anchor="middle">занято</text>
+<text x="331" y="278" font-family="Inter, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#7A6E62" text-anchor="middle">busy</text>
+<rect x="400" y="202" width="110" height="58" rx="12" fill="#DCE9E3" stroke="#C9922F" stroke-width="2"/>
+<text x="455" y="228" font-family="JetBrains Mono, monospace" font-size="16" font-weight="400" fill="#1A1714" text-anchor="middle">15:30</text>
+<text x="455" y="246" font-family="Inter, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1A1714" text-anchor="middle">Нам · 1,5ч</text>
+<text x="455" y="278" font-family="Inter, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#7A6E62" text-anchor="middle">last</text>
+<rect x="466" y="193" width="52" height="18" rx="9" fill="#C9922F"/>
+<text x="492" y="205" font-family="Inter, Helvetica, sans-serif" font-size="8.5" font-weight="600" fill="#1A1714" text-anchor="middle">последний</text>
+<rect x="524" y="202" width="110" height="58" rx="12" fill="#F4EDE3" stroke="#E3D9CB" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="579" y="228" font-family="JetBrains Mono, monospace" font-size="16" font-weight="400" fill="#7A6E62" text-anchor="middle">17:00</text>
+<text x="579" y="246" font-family="Inter, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#7A6E62" text-anchor="middle">—</text>
+<text x="579" y="278" font-family="Inter, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#7A6E62" text-anchor="middle">unavailable</text>
+<text x="28" y="302" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#9E4A2E" text-anchor="start" letter-spacing="1.5">ПРОГРЕСС КУРСА</text>
+<rect x="28" y="324" width="500" height="104" rx="20" fill="#F4EDE3"/>
+<text x="48" y="352" font-family="Inter, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#1A1714" text-anchor="start">Курс: спина и шея</text>
+<text x="508" y="352" font-family="Inter, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#2E5A49" text-anchor="end">7 из 10</text>
+<circle cx="50" cy="376" r="6" fill="#3F7A62"/>
+<circle cx="72" cy="376" r="6" fill="#3F7A62"/>
+<circle cx="94" cy="376" r="6" fill="#3F7A62"/>
+<circle cx="116" cy="376" r="6" fill="#3F7A62"/>
+<circle cx="138" cy="376" r="6" fill="#3F7A62"/>
+<circle cx="160" cy="376" r="6" fill="#3F7A62"/>
+<circle cx="182" cy="376" r="6" fill="#3F7A62"/>
+<circle cx="204" cy="376" r="6" fill="none" stroke="#E3D9CB" stroke-width="1.75"/>
+<circle cx="226" cy="376" r="6" fill="none" stroke="#E3D9CB" stroke-width="1.75"/>
+<circle cx="248" cy="376" r="6" fill="none" stroke="#E3D9CB" stroke-width="1.75"/>
+<text x="48" y="404" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="400" fill="#7A6E62" text-anchor="start">14.10 ———————————— 02.11    Следующий: пт, 24 окт, 11:00 · Нам</text>
+<text x="570" y="302" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#9E4A2E" text-anchor="start" letter-spacing="1.5">БЕЙДЖИ</text>
+<rect x="570" y="324" width="94" height="24" rx="12" fill="#DDE5E1"/>
+<text x="617.0" y="340" font-family="Inter, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#2E5A49" text-anchor="middle">Корпоратив</text>
+<rect x="570" y="356" width="123" height="24" rx="12" fill="#F7E2D8"/>
+<text x="631.4" y="372" font-family="Inter, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#9E4A2E" text-anchor="middle">Частный клиент</text>
+<rect x="570" y="388" width="94" height="24" rx="12" fill="#F3E2C2"/>
+<text x="617.0" y="404" font-family="Inter, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#1A1714" text-anchor="middle">Сертификат</text>
+<rect x="570" y="420" width="144" height="24" rx="12" fill="#DEE7ED"/>
+<text x="642.2" y="436" font-family="Inter, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#3C6E8F" text-anchor="middle">Детская программа</text>
+<text x="28" y="450" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#9E4A2E" text-anchor="start" letter-spacing="1.5">КАРТОЧКА МАСТЕРА</text>
+<rect x="28" y="470" width="240" height="196" rx="20" fill="#F4EDE3"/>
+<path d="M28 490a20 20 0 0 1 20-20h200a20 20 0 0 1 20 20v88H28z" fill="#DCE9E3"/>
+<text x="148" y="532" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#7A6E62" text-anchor="middle">портрет 4:5</text>
+<text x="48" y="602" font-family="Inter, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#1A1714" text-anchor="start">Нигина Саидова</text>
+<text x="48" y="620" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="400" fill="#7A6E62" text-anchor="start">Мастер · 8 лет опыта</text>
+<rect x="48" y="630" width="86" height="22" rx="11" fill="#FBF8F3" stroke="#E3D9CB"/>
+<text x="91" y="645" font-family="Inter, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#4A423A" text-anchor="middle">Спина и шея</text>
+<text x="48" y="662" font-family="Inter, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#3F7A62" text-anchor="start">Ближайшее: сегодня 15:30</text>
+<text x="300" y="464" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#9E4A2E" text-anchor="start" letter-spacing="1.5">ПОЛЕ ВВОДА</text>
+<text x="300" y="492" font-family="Inter, Helvetica, sans-serif" font-size="12.5" font-weight="500" fill="#1A1714" text-anchor="start">Телефон — обязательно</text>
+<rect x="300" y="502" width="280" height="48" rx="6" fill="#FBF8F3" stroke="#E3D9CB"/>
+<text x="316" y="532" font-family="JetBrains Mono, monospace" font-size="14" font-weight="400" fill="#7A6E62" text-anchor="start">+992 __ ___ __ __</text>
+<text x="300" y="568" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="400" fill="#7A6E62" text-anchor="start">На этот номер придёт подтверждение записи</text>
+<text x="300" y="604" font-family="Inter, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#9E4A2E" text-anchor="start" letter-spacing="1.5">С ОШИБКОЙ</text>
+<rect x="300" y="614" width="280" height="48" rx="6" fill="#FBF8F3" stroke="#A33A2C" stroke-width="1.5"/>
+<text x="316" y="644" font-family="JetBrains Mono, monospace" font-size="14" font-weight="400" fill="#1A1714" text-anchor="start">+992 93 17</text>
+<text x="300" y="680" font-family="Inter, Helvetica, sans-serif" font-size="11.5" font-weight="400" fill="#A33A2C" text-anchor="start">Проверьте номер: нужно 9 цифр после +992</text>
+</svg>

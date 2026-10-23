@@ -1,0 +1,1114 @@
+<title>Тайский салон · кабинет</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Раскладка: липкая шапка с вкладками; под ней одна рабочая область —
+   сводка сверху, деталь снизу; сетка расписания 6 слотов × 3 кабинета. */
+:root{
+  --forest-900:#14271F; --forest-800:#1F3D32; --forest-700:#2E5A49; --forest-600:#3F7A62;
+  --forest-300:#9CBFB0; --forest-100:#DCE9E3;
+  --terra-700:#9E4A2E; --terra-600:#B45A38; --terra-500:#C06B4A; --terra-200:#F0D3C5;
+  --sand-500:#D8C4A8; --sand-300:#EADFD0; --sand-100:#F4EDE3; --cream:#FBF8F3;
+  --gold-600:#C9922F; --danger-600:#A33A2C; --info-600:#3C6E8F;
+
+  --bg:var(--cream); --surface:var(--sand-100); --surface-2:var(--sand-300);
+  --inverse:var(--forest-800);
+  --fg:#1A1714; --fg-2:#4A423A; --fg-muted:#7A6E62; --fg-on-inverse:var(--cream);
+  --line:#E3D9CB; --line-strong:var(--sand-500);
+  --action:var(--forest-700); --action-hover:var(--forest-800);
+  --accent:var(--terra-600); --accent-hover:var(--terra-700); --accent-text:var(--terra-700);
+  --ok:var(--forest-600); --warn:var(--gold-600); --bad:var(--danger-600); --info:var(--info-600);
+  --slot-free:var(--forest-100); --slot-busy:var(--sand-300);
+  --chart-1:#0E7A55; --chart-2:#C9922F; --chart-3:#2A6DA8; --chart-4:#B45A38;
+  --chart-seq:#378C5B;
+
+  --f-display:"PT Serif",Georgia,serif;
+  --f-text:"Inter","PT Sans",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,monospace;
+
+  --r-sm:6px; --r-md:12px; --r-lg:20px; --r-pill:999px;
+  --sh-sm:0 2px 8px rgba(26,23,20,.07); --sh-md:0 8px 24px rgba(26,23,20,.09);
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --bg:#101D18; --surface:#16281F; --surface-2:#1F3D32; --inverse:#0A1510;
+  --fg:#EFE7DB; --fg-2:#B3A897; --fg-muted:#8C8375; --fg-on-inverse:#EFE7DB;
+  --line:#2A4035; --line-strong:#3A5648;
+  --action:#4E9478; --action-hover:#5CA587;
+  --accent:#D47B55; --accent-hover:#E08C66; --accent-text:#E09A76;
+  --ok:#4E9478; --warn:#DCAE4F; --bad:#D4705E; --info:#6AA6E0;
+  --slot-free:#1E3B2F; --slot-busy:#22302A;
+  --chart-1:#298954; --chart-2:#B18D2A; --chart-3:#488ACB; --chart-4:#BB6543;
+  --chart-seq:#3F9D76;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#101D18; --surface:#16281F; --surface-2:#1F3D32; --inverse:#0A1510;
+  --fg:#EFE7DB; --fg-2:#B3A897; --fg-muted:#8C8375; --fg-on-inverse:#EFE7DB;
+  --line:#2A4035; --line-strong:#3A5648;
+  --action:#4E9478; --action-hover:#5CA587;
+  --accent:#D47B55; --accent-hover:#E08C66; --accent-text:#E09A76;
+  --ok:#4E9478; --warn:#DCAE4F; --bad:#D4705E; --info:#6AA6E0;
+  --slot-free:#1E3B2F; --slot-busy:#22302A;
+  --chart-1:#298954; --chart-2:#B18D2A; --chart-3:#488ACB; --chart-4:#BB6543;
+  --chart-seq:#3F9D76;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:400 16px/1.55 var(--f-text);margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--inverse)}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;text-wrap:balance;margin:0}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--action);outline-offset:2px;border-radius:var(--r-sm)}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* ── шапка ── */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--inverse);color:var(--fg-on-inverse)}
+.top-in{max-width:1180px;margin:0 auto;padding-block:12px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand h1{font-size:19px;letter-spacing:2px;color:var(--fg-on-inverse);white-space:nowrap}
+.brand small{display:block;font-family:var(--f-text);font-size:10px;letter-spacing:1px;
+  color:var(--forest-300);text-transform:uppercase;font-weight:400}
+.who{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--forest-300)}
+.role{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:var(--r-pill);
+  background:rgba(255,255,255,.1);color:var(--fg-on-inverse);font-weight:600;font-size:11.5px;white-space:nowrap}
+.role.ro{background:rgba(212,112,94,.25)}
+nav{background:var(--inverse);border-top:1px solid rgba(255,255,255,.08)}
+.nav-in{max-width:1180px;margin:0 auto;display:flex;gap:2px;overflow-x:auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.nav-in button{background:none;border:0;padding:11px 14px;color:var(--forest-300);cursor:pointer;
+  font-size:14px;font-weight:500;border-bottom:2px solid transparent;white-space:nowrap}
+.nav-in button[aria-selected="true"]{color:var(--fg-on-inverse);border-bottom-color:var(--accent)}
+.nav-in button:hover{color:var(--fg-on-inverse)}
+
+/* ── оболочка ── */
+.wrap{max-width:1180px;margin:0 auto;padding-block:22px 64px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text)}
+.lede{color:var(--fg-2);max-width:62ch}
+.muted{color:var(--fg-muted)}
+.sec-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.sec-head h2{font-size:26px}
+
+/* ── карточки и плитки ── */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:22px}
+.tile{background:var(--surface);border-radius:var(--r-lg);padding:16px 18px;min-width:0}
+.tile .k{font-size:10.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-text)}
+.tile .v{font-family:var(--f-display);font-size:30px;line-height:1.1;margin-top:8px}
+.tile .s{font-size:11.5px;color:var(--fg-muted);margin-top:4px}
+.card{background:var(--surface);border-radius:var(--r-lg);padding:18px;min-width:0}
+.panel{border:1px solid var(--line);border-radius:var(--r-lg);padding:18px;background:var(--bg);min-width:0}
+
+/* ── кнопки ── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;
+  padding:0 20px;border-radius:var(--r-md);border:1px solid transparent;cursor:pointer;font-weight:500}
+.btn-primary{background:var(--action);color:#fff}
+.btn-primary:hover:not(:disabled){background:var(--action-hover)}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover:not(:disabled){background:var(--accent-hover)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--fg)}
+.btn-ghost:hover:not(:disabled){background:var(--surface)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn-sm{min-height:36px;padding:0 14px;font-size:14px}
+
+/* ── формы ── */
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label{font-size:14px;font-weight:500}
+.field .hint{font-size:12px;color:var(--fg-muted)}
+.field input,.field select{min-height:48px;padding:0 12px;background:var(--bg);
+  border:1px solid var(--line);border-radius:var(--r-sm);width:100%}
+.field.err input{border-color:var(--bad);border-width:1.5px}
+.field .msg{font-size:12px;color:var(--bad)}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+
+/* ── сетка расписания ── */
+.daybar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.daybar .date{font-family:var(--f-display);font-size:22px}
+.grid{display:grid;grid-template-columns:72px repeat(3,minmax(140px,1fr));gap:8px;min-width:560px}
+.grid-scroll{overflow-x:auto;padding-bottom:4px}
+.gh{font-size:11.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--fg-muted);
+  padding:4px 2px;align-self:end}
+.gt{font-family:var(--f-mono);font-size:14px;color:var(--fg-2);align-self:center;padding-right:4px}
+.cell{border-radius:var(--r-md);border:1px solid var(--line);background:var(--bg);
+  padding:9px 11px;min-height:62px;text-align:left;width:100%;cursor:pointer;display:block}
+.cell:hover:not(:disabled){box-shadow:var(--sh-sm)}
+.cell .nm{font-size:13.5px;font-weight:500;line-height:1.3;word-break:break-word}
+.cell .st{font-size:11px;margin-top:3px;display:flex;align-items:center;gap:5px}
+.cell.free{background:var(--slot-free);border-color:transparent}
+.cell.free .nm{color:var(--ok);font-weight:600}
+.cell.booked{background:var(--surface);border-color:transparent}
+.cell.closed{background:var(--surface);border-style:dashed;cursor:not-allowed;opacity:.7}
+.cell:disabled{cursor:default}
+.dot{width:7px;height:7px;border-radius:50%;flex:none}
+.dot.ok{background:var(--ok)} .dot.busy{background:var(--fg-muted)} .dot.closed{background:var(--line-strong)}
+
+/* ── таблицы ── */
+.tbl-scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:620px}
+th{background:var(--surface-2);font-size:10.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--fg-2);text-align:left;padding:9px 10px;position:sticky;top:0}
+td{padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;vertical-align:top}
+tbody tr:nth-child(even){background:var(--surface)}
+td.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--f-mono);font-size:13px}
+
+/* ── бейджи, полосы ── */
+.badge{display:inline-flex;align-items:center;gap:5px;padding:2px 9px;border-radius:var(--r-pill);
+  font-size:11.5px;font-weight:600;white-space:nowrap}
+.b-corporate{background:color-mix(in srgb,var(--forest-700) 16%,transparent);color:var(--action)}
+.b-private{background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent-text)}
+.b-certificate{background:color-mix(in srgb,var(--warn) 22%,transparent);color:var(--fg)}
+.b-child{background:color-mix(in srgb,var(--info) 16%,transparent);color:var(--info)}
+.b-bad{background:color-mix(in srgb,var(--bad) 14%,transparent);color:var(--bad)}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.chip{padding:6px 13px;border-radius:var(--r-pill);border:1px solid var(--line);background:var(--bg);
+  cursor:pointer;font-size:13.5px}
+.chip[aria-pressed="true"]{background:var(--action);border-color:var(--action);color:#fff}
+.bars{display:flex;flex-direction:column;gap:9px}
+.bar-row{display:grid;grid-template-columns:58px 1fr 68px;align-items:center;gap:10px;font-size:13.5px}
+.bar-row .lab{font-family:var(--f-mono);color:var(--fg-2)}
+.bar-track{height:18px;border-radius:4px;background:var(--surface);overflow:hidden}
+.bar-fill{height:100%;border-radius:4px;background:var(--chart-seq)}
+.bar-fill.low{background:var(--chart-2)}
+.bar-row .val{text-align:right;font-variant-numeric:tabular-nums;font-weight:600;font-size:13px}
+
+/* ── график месяца ── */
+.mtbl{border-collapse:collapse;min-width:1100px;font-size:12px}
+.mtbl th,.mtbl td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);
+  padding:5px 6px;white-space:nowrap;text-align:center}
+.mtbl th{position:static;font-size:9.5px;letter-spacing:.04em;line-height:1.3}
+.mtbl .rm0{background:color-mix(in srgb,var(--forest-700) 16%,var(--surface-2))}
+.mtbl .rm1{background:color-mix(in srgb,var(--accent) 16%,var(--surface-2))}
+.mtbl .rm2{background:color-mix(in srgb,var(--info) 16%,var(--surface-2))}
+.mtbl td.d,.mtbl th.d{position:sticky;left:0;z-index:1;background:var(--bg);text-align:left;
+  font-family:var(--f-mono);font-size:11.5px;border-right:1px solid var(--line-strong)}
+.mtbl tbody tr:nth-child(even) td.d{background:var(--surface)}
+.mtbl tbody tr{cursor:pointer}
+.mtbl tbody tr:hover td{background:var(--surface)}
+.mtbl td.b{background:color-mix(in srgb,var(--chart-seq) 18%,transparent);font-weight:500;
+  max-width:92px;overflow:hidden;text-overflow:ellipsis}
+.mtbl td.f{color:var(--line-strong)}
+.mtbl tr.off td{background:var(--surface);color:var(--fg-muted);font-style:italic}
+.mtbl tfoot td{background:var(--surface-2);font-weight:600;font-size:11px}
+
+/* ── служебное ── */
+.note{border-radius:var(--r-md);padding:12px 14px;font-size:14px;display:flex;gap:10px;align-items:flex-start}
+.note-info{background:color-mix(in srgb,var(--info) 10%,transparent);color:var(--fg)}
+.note-warn{background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--fg)}
+.note-bad{background:color-mix(in srgb,var(--bad) 10%,transparent);color:var(--fg)}
+.note b{font-weight:600}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));
+  background:var(--inverse);color:var(--fg-on-inverse);padding:12px 20px;border-radius:var(--r-pill);
+  box-shadow:var(--sh-md);z-index:50;font-size:14px;max-width:min(92vw,520px);text-align:center}
+.skel{background:linear-gradient(90deg,var(--surface),var(--surface-2),var(--surface));
+  border-radius:var(--r-sm);animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.82}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media (max-width:860px){.two-col{grid-template-columns:1fr}}
+.stack{display:flex;flex-direction:column;gap:22px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+</style>
+
+<header class="top">
+  <div class="top-in">
+    <div class="brand">
+      <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true" style="flex:none">
+        <g fill="none" stroke-linecap="round" stroke-width="4">
+          <path d="M32 52C16 41 15 23 32 7" stroke="#FBF8F3"/>
+          <path d="M32 52C48 41 49 23 32 7" stroke="#FBF8F3"/>
+          <path d="M24 44C24 34 27 27 32 21" stroke="#C06B4A"/>
+          <path d="M40 44C40 34 37 27 32 21" stroke="#9CBFB0"/>
+          <path d="M15 57h34" stroke="#FBF8F3"/>
+        </g>
+      </svg>
+      <div>
+        <h1>ТАЙСКИЙ САЛОН</h1>
+        <small>Рабочий кабинет · Душанбе</small>
+      </div>
+    </div>
+    <div class="who">
+      <span id="who-name" class="muted">Проверяем доступ…</span>
+      <span id="who-role" class="role">—</span>
+    </div>
+  </div>
+  <nav>
+    <div class="nav-in" role="tablist" aria-label="Разделы кабинета">
+      <button role="tab" data-tab="schedule" aria-selected="true">Расписание</button>
+      <button role="tab" data-tab="month" aria-selected="false">График месяца</button>
+      <button role="tab" data-tab="booking" aria-selected="false">Запись</button>
+      <button role="tab" data-tab="clients" aria-selected="false">Клиенты</button>
+      <button role="tab" data-tab="load" aria-selected="false">Загрузка</button>
+      <button role="tab" data-tab="export" aria-selected="false">Экспорт</button>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div id="conn" class="note note-info" style="margin-bottom:18px">
+    <span>Подключаемся к базе кабинета. Данные появятся через секунду.</span>
+  </div>
+
+  <!-- ── Расписание ── -->
+  <section id="tab-schedule" class="stack">
+    <div>
+      <div class="sec-head">
+        <h2>Расписание дня</h2>
+        <span id="day-occ" class="muted tnum"></span>
+      </div>
+      <div class="daybar">
+        <button class="btn btn-ghost btn-sm" id="d-prev">‹ Назад</button>
+        <button class="btn btn-ghost btn-sm" id="d-today">Сегодня</button>
+        <button class="btn btn-ghost btn-sm" id="d-next">Вперёд ›</button>
+        <div class="field" style="max-width:190px">
+          <label class="sr" for="d-pick">Дата</label>
+          <input type="date" id="d-pick">
+        </div>
+        <div class="date" id="d-label"></div>
+      </div>
+      <div id="day-note"></div>
+      <div class="grid-scroll"><div class="grid" id="grid">
+        <div class="skel" style="grid-column:1/-1;height:360px"></div>
+      </div></div>
+      <p class="muted" style="font-size:13px;margin-top:12px">
+        Нажмите свободный слот, чтобы записать клиента. Занятый слот открывает карточку записи.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── График месяца ── -->
+  <section id="tab-month" hidden class="stack">
+    <div>
+      <div class="sec-head">
+        <h2>График месяца</h2>
+        <span id="mo-sum" class="muted tnum"></span>
+      </div>
+      <p class="lede" style="margin:0 0 14px">
+        Тот же разворот, что на листе «График» в учётной книге: день по вертикали,
+        три кабинета по шесть слотов по горизонтали. В ячейке — фамилия, полное имя всплывает при наведении.
+      </p>
+      <div class="row" style="margin-bottom:12px">
+        <div class="field" style="max-width:210px">
+          <label for="mo-pick">Месяц</label>
+          <select id="mo-pick"></select>
+        </div>
+      </div>
+      <div class="tbl-scroll"><table class="mtbl" id="mo-tbl"></table></div>
+      <p class="muted" style="font-size:13px;margin-top:12px">
+        Нажмите строку, чтобы открыть этот день в расписании и записать клиента.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Запись ── -->
+  <section id="tab-booking" hidden class="stack">
+    <div>
+      <div class="sec-head"><h2>Новая запись</h2></div>
+      <p class="lede" style="margin:0 0 18px">
+        Курс — десять сеансов в одно и то же время. Система проверит, свободен ли слот
+        во все дни курса, и покажет, какие дни заняты.
+      </p>
+      <form id="bk-form" class="panel stack" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="bk-name">Клиент — обязательно</label>
+            <input id="bk-name" list="bk-clients" autocomplete="off" placeholder="Фамилия и имя">
+            <datalist id="bk-clients"></datalist>
+            <span class="hint">Начните вводить — подставим из базы</span>
+            <span class="msg" hidden></span>
+          </div>
+          <div class="field">
+            <label for="bk-tel">Телефон — обязательно</label>
+            <input id="bk-tel" inputmode="tel" autocomplete="tel" placeholder="+992 ___ __ __ __">
+            <span class="hint">На него придёт подтверждение</span>
+            <span class="msg" hidden></span>
+          </div>
+          <div class="field">
+            <label for="bk-prog">Программа</label>
+            <select id="bk-prog"></select>
+          </div>
+          <div class="field">
+            <label for="bk-room">Кабинет</label>
+            <select id="bk-room"></select>
+          </div>
+          <div class="field">
+            <label for="bk-date">Дата первого сеанса</label>
+            <input type="date" id="bk-date">
+            <span class="msg" hidden></span>
+          </div>
+          <div class="field">
+            <label for="bk-slot">Время</label>
+            <select id="bk-slot"></select>
+          </div>
+          <div class="field">
+            <label for="bk-kind">Объём</label>
+            <select id="bk-kind">
+              <option value="course">Курс 10 сеансов</option>
+              <option value="single">Один сеанс</option>
+            </select>
+          </div>
+        </div>
+        <div id="bk-preview" class="note note-info" hidden></div>
+        <div class="row">
+          <button type="submit" class="btn btn-accent" id="bk-submit">Записать</button>
+          <button type="button" class="btn btn-ghost" id="bk-check">Проверить занятость</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── Клиенты ── -->
+  <section id="tab-clients" hidden class="stack">
+    <div>
+      <div class="sec-head">
+        <h2>База клиентов</h2>
+        <span id="cl-count" class="muted tnum"></span>
+      </div>
+      <div class="chips" id="cl-chips"></div>
+      <div class="row" style="margin-bottom:14px;align-items:flex-end">
+        <div class="field" style="max-width:340px">
+          <label for="cl-q">Поиск по фамилии или телефону</label>
+          <input id="cl-q" type="search" autocomplete="off" placeholder="Например: Рустамова">
+        </div>
+        <button class="btn btn-primary" id="cl-add">Добавить клиента</button>
+      </div>
+      <div id="cl-edit"></div>
+      <div id="cl-note"></div>
+      <div class="tbl-scroll"><table>
+        <thead><tr>
+          <th>ФИО</th><th>Группа</th><th>Нам</th><th>Ели</th><th>НОЙ</th>
+          <th>Итого</th><th>Курс</th><th>Телефон</th><th></th>
+        </tr></thead>
+        <tbody id="cl-body"></tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <!-- ── Загрузка ── -->
+  <section id="tab-load" hidden class="stack">
+    <div>
+      <div class="sec-head"><h2>Загрузка салона</h2><span id="ld-period" class="muted"></span></div>
+      <div class="tiles" id="ld-tiles"></div>
+      <div class="two-col">
+        <div class="card">
+          <h3 style="font-size:17px;font-family:var(--f-text);font-weight:600">Заполняемость по слотам</h3>
+          <p class="muted" style="font-size:12.5px;margin:4px 0 14px">процент от ёмкости слота за месяц</p>
+          <div class="bars" id="ld-slots"></div>
+        </div>
+        <div class="card">
+          <h3 style="font-size:17px;font-family:var(--f-text);font-weight:600">Загрузка кабинетов</h3>
+          <p class="muted" style="font-size:12.5px;margin:4px 0 14px">процент от ёмкости кабинета за месяц</p>
+          <div class="bars" id="ld-rooms"></div>
+          <p class="muted tnum" id="ld-spread" style="font-size:13px;margin-top:14px"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Экспорт ── -->
+  <section id="tab-export" hidden class="stack">
+    <div>
+      <div class="sec-head"><h2>Экспорт в Google Sheets</h2></div>
+      <p class="lede">
+        Выгрузка отдаёт те же данные, что показывает кабинет, в формате CSV с разделителем «;»
+        и кодировкой UTF-8 — Google Sheets открывает такой файл без настройки.
+      </p>
+      <div class="two-col" style="margin-top:18px">
+        <div class="panel stack">
+          <div>
+            <div class="eyebrow">Выгрузить</div>
+            <h3 style="font-size:19px;margin-top:6px">Файлы кабинета</h3>
+          </div>
+          <div class="row">
+            <button class="btn btn-primary" id="ex-sched">Расписание CSV</button>
+            <button class="btn btn-primary" id="ex-clients">Клиенты CSV</button>
+          </div>
+          <p class="muted" style="font-size:13px;margin:0" id="ex-note">
+            Выгрузка берёт актуальное состояние базы, включая записи, сделанные в кабинете.
+          </p>
+        </div>
+        <div class="panel stack">
+          <div>
+            <div class="eyebrow">Как перенести</div>
+            <h3 style="font-size:19px;margin-top:6px">Импорт в таблицу</h3>
+          </div>
+          <p style="margin:0"><a href="https://docs.google.com/spreadsheets/d/1akohIuMrbgtG1Pevsjyc9qPVDlpdlQokqIBhlZke9pU/edit" style="color:var(--action);font-weight:500">Открыть таблицу салона</a></p>
+          <ol style="margin:0;padding-left:20px;font-size:14.5px;line-height:1.7;color:var(--fg-2)">
+            <li>Откройте таблицу по ссылке выше.</li>
+            <li>Файл → Импортировать → Загрузка → выберите скачанный CSV.</li>
+            <li>Место импорта: «Заменить данные на текущем листе» либо «Вставить новые листы».</li>
+            <li>Тип разделителя: «Другой» → точка с запятой.</li>
+            <li>Снимите «Преобразовывать текст в числа и даты», чтобы телефоны не потеряли «+992».</li>
+          </ol>
+        </div>
+      </div>
+      <div class="note note-warn" style="margin-top:18px">
+        <span><b>Автоматическая запись в таблицу пока не настроена.</b> Чтобы кабинет сам писал записи
+        в Google Sheets, без скачивания файлов, в настройках claude.ai нужно подключить коннектор
+        Google Sheets. После этого кабинет получает доступ к таблице от вашего имени и обновляет
+        её при каждой новой записи.</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+"use strict";
+const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
+const TABS=["schedule","month","booking","clients","load","export"];
+const S={db:null,user:null,dl:null,settings:null,clients:[],groups:[],days:new Map(),
+         date:null,canWrite:null,ready:false};
+
+/* ── утилиты ── */
+const pad=n=>String(n).padStart(2,"0");
+const iso=d=>d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
+const RU_M=["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];
+const RU_D=["воскресенье","понедельник","вторник","среда","четверг","пятница","суббота"];
+function human(s){const d=new Date(s+"T00:00:00");
+  return d.getDate()+" "+RU_M[d.getMonth()]+" "+d.getFullYear()+", "+RU_D[d.getDay()];}
+function toast(msg){const t=document.createElement("div");t.className="toast";t.textContent=msg;
+  t.setAttribute("role","status");document.body.appendChild(t);setTimeout(()=>t.remove(),4200);}
+function esc(v){return String(v==null?"":v).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+function telOk(v){return (v.match(/\d/g)||[]).length>=9;}
+function nextDays(start,count,closedWd){
+  const out=[];let d=new Date(start+"T00:00:00");
+  while(out.length<count){ if(d.getDay()!==closedWd) out.push(iso(d)); d.setDate(d.getDate()+1);}
+  return out;
+}
+
+/* ── вкладки ── */
+function showTab(name){
+  if(!TABS.includes(name)) name="schedule";
+  TABS.forEach(t=>{ $("#tab-"+t).hidden=(t!==name); });
+  $$('[role="tab"]').forEach(b=>b.setAttribute("aria-selected",String(b.dataset.tab===name)));
+  try{ if(location.hash.slice(1)!==name) history.replaceState(null,"","#"+name);}catch(e){}
+}
+$$('[role="tab"]').forEach(b=>b.addEventListener("click",()=>showTab(b.dataset.tab)));
+showTab((location.hash||"#schedule").slice(1));
+
+/* ── расписание ── */
+function dayDoc(date){ return S.days.get(date)||null; }
+
+function renderDay(){
+  const g=$("#grid"), date=S.date, d=dayDoc(date);
+  $("#d-label").textContent=date?human(date):"";
+  if($("#d-pick").value!==date) $("#d-pick").value=date||"";
+  const note=$("#day-note"); note.innerHTML="";
+
+  if(!S.settings){ return; }
+  const rooms=S.settings.rooms, slots=S.settings.slots;
+
+  if(!d){
+    g.innerHTML="";
+    note.innerHTML='<div class="note note-info">За эту дату в базе нет данных. '+
+      'Загружен октябрь 2026 — месяц из учётной книги.</div>';
+    $("#day-occ").textContent="";
+    return;
+  }
+  if(d.closed){
+    note.innerHTML='<div class="note note-warn"><span><b>Воскресенье — выходной день.</b> '+
+      'Запись на этот день не открывается.</span></div>';
+  }
+  const booked=d.closed?0:countDay(d);
+  $("#day-occ").textContent=d.closed?"выходной":("занято "+booked+" из 18 · "+Math.round(booked/18*100)+" %");
+
+  const parts=['<div class="gh">Время</div>'];
+  rooms.forEach(r=>parts.push('<div class="gh">'+esc(r.name)+'</div>'));
+  slots.forEach(slot=>{
+    parts.push('<div class="gt tnum">'+slot+'</div>');
+    rooms.forEach(r=>{
+      const cell=(d.grid&&d.grid[r.id]&&d.grid[r.id][slot])||{status:"free",client:null};
+      const st=d.closed?"closed":cell.status;
+      if(st==="closed"){
+        parts.push('<div class="cell closed"><div class="nm muted">—</div>'+
+          '<div class="st muted"><span class="dot closed"></span>выходной</div></div>');
+      }else if(st==="booked"&&cell.client){
+        parts.push('<button class="cell booked" data-room="'+r.id+'" data-slot="'+slot+'" data-act="open">'+
+          '<div class="nm">'+esc(cell.client)+'</div>'+
+          (cell.group?'<div class="st"><span class="badge b-'+esc(cell.segment||"private")+'">'+
+            esc(cell.group)+'</span></div>':'')+
+          '<div class="st muted"><span class="dot busy"></span>'+
+          (cell.course?esc(cell.course):"записан")+'</div></button>');
+      }else{
+        parts.push('<button class="cell free" data-room="'+r.id+'" data-slot="'+slot+'" data-act="book">'+
+          '<div class="nm">Свободно</div><div class="st muted">'+
+          '<span class="dot ok"></span>1,5 ч · записать</div></button>');
+      }
+    });
+  });
+  g.innerHTML=parts.join("");
+}
+function countDay(d){
+  if(!d||d.closed||!d.grid) return 0;
+  let n=0; Object.values(d.grid).forEach(r=>Object.values(r).forEach(c=>{if(c&&c.client)n++;}));
+  return n;
+}
+$("#grid").addEventListener("click",e=>{
+  const b=e.target.closest("button.cell"); if(!b) return;
+  const room=b.dataset.room, slot=b.dataset.slot;
+  if(b.dataset.act==="book"){
+    $("#bk-room").value=room; $("#bk-slot").value=slot; $("#bk-date").value=S.date;
+    showTab("booking"); $("#bk-name").focus();
+  }else{
+    const d=dayDoc(S.date); const cell=d.grid[room][slot];
+    const roomName=(S.settings.rooms.find(r=>r.id===room)||{}).name||room;
+    openBooked(cell,roomName,slot,room);
+  }
+});
+function openBooked(cell,roomName,slot,roomId){
+  const note=$("#day-note");
+  note.innerHTML='<div class="note note-info"><span><b>'+esc(cell.client)+'</b>'+
+    (cell.group?' <span class="badge b-'+esc(cell.segment||"private")+'">'+esc(cell.group)+'</span>':'')+
+    '<br>'+esc(roomName)+' · '+slot+(cell.course?' · '+esc(cell.course):'')+
+    (cell.tel?' · <span class="tnum">'+esc(cell.tel)+'</span>':' · телефон не указан')+
+    '<br><button class="btn btn-ghost btn-sm" id="free-slot" style="margin-top:10px">Освободить слот</button>'+
+    '</span></div>';
+  const btn=$("#free-slot");
+  if(S.canWrite===false){ btn.disabled=true; btn.textContent="Только просмотр"; return; }
+  btn.addEventListener("click",async()=>{
+    btn.disabled=true; btn.textContent="Освобождаем…";
+    const ok=await writeCell(S.date,roomId,slot,{client:null,status:"free",course:null,tel:null});
+    if(ok){ toast("Слот "+slot+" освобождён"); note.innerHTML=""; }
+    else { btn.disabled=false; btn.textContent="Освободить слот"; }
+  });
+}
+
+/* ── запись в базу ── */
+async function writeCell(date,roomId,slot,value){
+  if(!S.db){ toast("База недоступна в этом окне"); return false; }
+  try{
+    const ref=S.db.doc("days/"+date);
+    const snap=await ref.get();
+    const patch={}; patch[roomId]={}; patch[roomId][slot]=value;
+    if(snap.exists){ await ref.update({grid:patch}); }
+    else{
+      const grid={};
+      S.settings.rooms.forEach(r=>{grid[r.id]={};S.settings.slots.forEach(s=>{grid[r.id][s]={client:null,status:"free"};});});
+      grid[roomId][slot]=value;
+      const d=new Date(date+"T00:00:00");
+      await ref.set({date:date,weekday:RU_D[d.getDay()],closed:false,grid:grid,capacity:18});
+    }
+    return true;
+  }catch(err){
+    const c=err&&err.code;
+    if(c==="invalid_argument"){ S.canWrite=false; paintRole(); toast("Нет прав на изменение расписания"); }
+    else if(c==="quota_exceeded"){ toast("База заполнена — удалите старые дни"); }
+    else if(c==="resource_exhausted"){ toast("Слишком часто. Подождите пару секунд"); }
+    else{ toast("Не удалось сохранить. Попробуйте ещё раз"); }
+    return false;
+  }
+}
+
+/* ── форма записи ── */
+function fillForm(){
+  const st=S.settings; if(!st) return;
+  $("#bk-prog").innerHTML=st.programs.map(p=>'<option value="'+p.id+'">'+esc(p.title)+
+    (p.note?" — "+esc(p.note):"")+'</option>').join("");
+  $("#bk-room").innerHTML=st.rooms.map(r=>'<option value="'+r.id+'">'+esc(r.name)+'</option>').join("");
+  $("#bk-slot").innerHTML=st.slots.map(s=>'<option value="'+s+'">'+s+'</option>').join("");
+  if(!$("#bk-date").value) $("#bk-date").value=S.date||"";
+}
+function fillClientList(){
+  const seen=new Set(), opts=[];
+  S.clients.forEach(c=>{ if(c.n&&!seen.has(c.n)){seen.add(c.n);opts.push('<option value="'+esc(c.n)+'">');} });
+  $("#bk-clients").innerHTML=opts.join("");
+}
+$("#bk-name").addEventListener("change",()=>{
+  const c=S.clients.find(x=>x.n===$("#bk-name").value.trim());
+  if(c&&c.tel&&!$("#bk-tel").value) $("#bk-tel").value=c.tel;
+});
+function planDates(){
+  const kind=$("#bk-kind").value, start=$("#bk-date").value;
+  if(!start) return [];
+  const n=kind==="single"?1:(S.settings?S.settings.courseDefaultSessions:10);
+  return nextDays(start,n,S.settings?S.settings.closedWeekday:6);
+}
+function checkPlan(){
+  const dates=planDates(), room=$("#bk-room").value, slot=$("#bk-slot").value;
+  const taken=[], missing=[];
+  dates.forEach(dt=>{
+    const d=dayDoc(dt);
+    if(!d){ missing.push(dt); return; }
+    const cell=d.grid&&d.grid[room]&&d.grid[room][slot];
+    if(cell&&cell.client) taken.push(dt);
+  });
+  return {dates,taken,missing};
+}
+function showPlan(){
+  const box=$("#bk-preview");
+  const start=$("#bk-date").value;
+  if(!start){ box.hidden=true; return; }
+  const {dates,taken,missing}=checkPlan();
+  const roomName=(S.settings.rooms.find(r=>r.id===$("#bk-room").value)||{}).name||"";
+  let html="<span><b>"+dates.length+(dates.length===1?" сеанс":" сеансов")+"</b> · "+
+    roomName+" · "+$("#bk-slot").value+"<br>с "+human(dates[0])+" по "+human(dates[dates.length-1]);
+  if(taken.length) html+='<br><span style="color:var(--bad)">Занято в эти дни: '+
+    taken.map(t=>t.slice(8)+"."+t.slice(5,7)).join(", ")+" — они будут пропущены</span>";
+  if(missing.length) html+='<br><span class="muted">Дней нет в базе: '+missing.length+" — будут созданы</span>";
+  html+="</span>";
+  box.innerHTML=html; box.className="note "+(taken.length?"note-warn":"note-info"); box.hidden=false;
+}
+["#bk-date","#bk-slot","#bk-room","#bk-kind"].forEach(sel=>
+  $(sel).addEventListener("change",showPlan));
+$("#bk-check").addEventListener("click",showPlan);
+
+function setErr(sel,msg){
+  const f=$(sel).closest(".field"), m=f.querySelector(".msg");
+  if(msg){ f.classList.add("err"); m.textContent=msg; m.hidden=false; }
+  else{ f.classList.remove("err"); m.hidden=true; }
+}
+$("#bk-form").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const name=$("#bk-name").value.trim(), tel=$("#bk-tel").value.trim(), date=$("#bk-date").value;
+  let bad=false;
+  if(!name){ setErr("#bk-name","Укажите, кого записываем"); bad=true; } else setErr("#bk-name");
+  if(!telOk(tel)){ setErr("#bk-tel","Проверьте номер: нужно 9 цифр после +992"); bad=true; } else setErr("#bk-tel");
+  if(!date){ setErr("#bk-date","Выберите дату первого сеанса"); bad=true; } else setErr("#bk-date");
+  if(bad){ return; }
+  if(S.canWrite===false){ toast("У вас доступ только на просмотр"); return; }
+
+  const btn=$("#bk-submit"); btn.disabled=true; const label=btn.textContent; btn.textContent="Записываем…";
+  const room=$("#bk-room").value, slot=$("#bk-slot").value;
+  const prog=S.settings.programs.find(p=>p.id===$("#bk-prog").value)||{title:""};
+  const {dates,taken}=checkPlan();
+  const free=dates.filter(d=>!taken.includes(d));
+  let done=0;
+  for(let i=0;i<free.length;i++){
+    const ok=await writeCell(free[i],room,slot,
+      {client:name,status:"booked",course:prog.title+" "+(i+1)+"/"+free.length,tel:tel});
+    if(!ok) break;
+    done++;
+  }
+  btn.disabled=false; btn.textContent=label;
+  if(done){
+    toast("Записано сеансов: "+done+(taken.length?" · пропущено занятых: "+taken.length:""));
+    $("#bk-form").reset(); $("#bk-preview").hidden=true; fillForm();
+    showTab("schedule");
+  }
+});
+
+/* ── клиенты ── */
+let clFilter="all", clQuery="";
+function renderChips(){
+  const parts=['<button class="chip" data-g="all" aria-pressed="'+(clFilter==="all")+'">Все группы</button>'];
+  S.groups.forEach(g=>parts.push('<button class="chip" data-g="'+esc(g.groupId)+'" aria-pressed="'+
+    (clFilter===g.groupId)+'">'+esc(g.title)+' · '+g.count+'</button>'));
+  $("#cl-chips").innerHTML=parts.join("");
+}
+$("#cl-chips").addEventListener("click",e=>{
+  const b=e.target.closest(".chip"); if(!b) return;
+  clFilter=b.dataset.g; renderChips(); renderClients();
+});
+$("#cl-q").addEventListener("input",()=>{clQuery=$("#cl-q").value.trim().toLowerCase();renderClients();});
+function renderClients(){
+  const body=$("#cl-body");
+  let rows=S.clients.filter(c=>clFilter==="all"||c.groupId===clFilter);
+  if(clQuery) rows=rows.filter(c=>c.n.toLowerCase().includes(clQuery)||(c.tel||"").includes(clQuery));
+  const noPhone=rows.filter(c=>!c.tel).length;
+  const badPhone=rows.filter(c=>c.telCheck).length;
+  $("#cl-count").textContent=rows.length+" из "+S.clients.length;
+  $("#cl-note").innerHTML = (noPhone||badPhone)
+    ? '<div class="note note-warn" style="margin-bottom:12px"><span>'+
+      (noPhone?'Без телефона: <b>'+noPhone+'</b>. Такому клиенту нельзя напомнить о сеансе '+
+        'и предложить продлить курс.':'')+
+      (badPhone?(noPhone?'<br>':'')+'Номер неполный у <b>'+badPhone+'</b>: в книге меньше девяти цифр. '+
+        'Цифры оставлены как есть — их нужно уточнить у клиента.':'')+
+      '</span></div>' : "";
+  if(!rows.length){
+    body.innerHTML='<tr><td colspan="9" class="muted" style="padding:22px">Ничего не найдено.</td></tr>';
+    return;
+  }
+  body.innerHTML=rows.slice(0,400).map(c=>{
+    const seg=(S.groups.find(g=>g.groupId===c.groupId)||{}).segment||"private";
+    const gt=(S.groups.find(g=>g.groupId===c.groupId)||{}).title||"";
+    const course=(c.start&&c.end)?(c.start.slice(8)+"."+c.start.slice(5,7)+" — "+c.end.slice(8)+"."+c.end.slice(5,7)):"—";
+    return '<tr><td>'+esc(c.n)+(c.note?' <span class="muted" style="font-size:12px">· пометка: '+esc(c.note)+'</span>':'')+'</td>'+
+      '<td><span class="badge b-'+seg+'">'+esc(gt)+'</span></td>'+
+      '<td class="num">'+c.nam+'</td><td class="num">'+c.eli+'</td><td class="num">'+c.noy+'</td>'+
+      '<td class="num"><b>'+c.total+'</b></td>'+
+      '<td class="num">'+course+'</td>'+
+      '<td class="num">'+(c.tel
+        ?(esc(c.tel)+(c.telCheck?' <span class="badge b-bad">проверить</span>':''))
+        :'<span class="badge b-bad">нет</span>')+'</td>'+
+      '<td><button class="btn btn-ghost btn-sm" data-edit="'+esc(c.id||"")+'">Изменить</button></td></tr>';
+  }).join("")+(rows.length>400?'<tr><td colspan="9" class="muted">Показаны первые 400 из '+rows.length+'. Уточните поиск.</td></tr>':"");
+}
+
+/* ── загрузка ── */
+function renderLoad(){
+  if(!S.settings) return;
+  const slots=S.settings.slots, rooms=S.settings.rooms;
+  const open=Array.from(S.days.values()).filter(d=>!d.closed);
+  const bySlot={}, byRoom={}; slots.forEach(s=>bySlot[s]=0); rooms.forEach(r=>byRoom[r.id]=0);
+  let booked=0;
+  open.forEach(d=>{
+    rooms.forEach(r=>slots.forEach(s=>{
+      const c=d.grid&&d.grid[r.id]&&d.grid[r.id][s];
+      if(c&&c.client){booked++;bySlot[s]++;byRoom[r.id]++;}
+    }));
+  });
+  const wd=open.length, cap=wd*18;
+  const occ=cap?(booked/cap*100):0;
+  const weakest=slots.reduce((a,b)=>bySlot[b]<bySlot[a]?b:a,slots[0]);
+  const noPhone=S.clients.filter(c=>!c.tel).length;
+  $("#ld-period").textContent=wd?("рабочих дней в базе: "+wd):"";
+  $("#ld-tiles").innerHTML=[
+    ["Загрузка","" + occ.toFixed(1).replace(".",",")+" %", booked+" из "+cap+" сеансов"],
+    ["Записей в базе", String(booked), "за загруженный период"],
+    ["Самый слабый слот", weakest, wd?("заполнен на "+(bySlot[weakest]/wd*100).toFixed(1).replace(".",",")+" %"):""],
+    ["Клиентов без телефона", String(noPhone), "из "+S.clients.length+" в базе"]
+  ].map(t=>'<div class="tile"><div class="k">'+t[0]+'</div><div class="v tnum">'+esc(t[1])+
+    '</div><div class="s">'+esc(t[2])+'</div></div>').join("");
+
+  const maxSlot=wd||1;
+  $("#ld-slots").innerHTML=slots.map(s=>{
+    const pct=bySlot[s]/maxSlot*100;
+    return '<div class="bar-row"><span class="lab">'+s+'</span>'+
+      '<span class="bar-track"><span class="bar-fill'+(s===weakest?" low":"")+'" style="width:'+
+      Math.max(1,Math.min(100,pct)).toFixed(1)+'%"></span></span>'+
+      '<span class="val">'+pct.toFixed(1).replace(".",",")+' %</span></div>';
+  }).join("");
+  const roomPct=rooms.map(r=>({name:r.name,pct:wd?byRoom[r.id]/(wd*6)*100:0}));
+  $("#ld-rooms").innerHTML=roomPct.map(r=>
+    '<div class="bar-row"><span class="lab">'+esc(r.name)+'</span>'+
+    '<span class="bar-track"><span class="bar-fill" style="width:'+
+    Math.max(1,Math.min(100,r.pct)).toFixed(1)+'%"></span></span>'+
+    '<span class="val">'+r.pct.toFixed(1).replace(".",",")+' %</span></div>').join("");
+  const spread=roomPct.length?Math.max.apply(null,roomPct.map(r=>r.pct))-Math.min.apply(null,roomPct.map(r=>r.pct)):0;
+  $("#ld-spread").textContent="Разброс между кабинетами — "+spread.toFixed(1).replace(".",",")+
+    " процентных пункта. Чем он меньше, тем ровнее распределены клиенты.";
+}
+
+/* ── редактирование карточек ── */
+function fmtTel(v){
+  const raw=String(v==null?"":v).trim();
+  if(!raw) return {tel:"",check:false};
+  let d=raw.replace(/\D/g,"");
+  if(d.length===12&&d.indexOf("992")===0) d=d.slice(3);
+  if(d.length===9) return {tel:"+992 "+d.slice(0,3)+" "+d.slice(3,5)+" "+d.slice(5,7)+" "+d.slice(7),check:false};
+  return {tel:raw,check:true};
+}
+async function mutateGroup(gid,fn){
+  const ref=S.db.doc("clients/"+gid);
+  const snap=await ref.get();
+  if(!snap.exists) throw {code:"invalid_argument",message:"Группа не найдена"};
+  const d=snap.data()||{};
+  const items=(d.items||[]).map(x=>Object.assign({},x));
+  fn(items);
+  await ref.update({items:items,count:items.length,
+    withPhone:items.filter(x=>x.tel).length,
+    sessions:items.reduce((a,b)=>a+(Number(b.total)||0),0)});
+}
+function closeEdit(){ $("#cl-edit").innerHTML=""; }
+function openClientEdit(id){
+  if(S.canWrite===false){ toast("У вас доступ только на просмотр"); return; }
+  const c=id?S.clients.find(x=>x.id===id):null;
+  if(id&&!c){ toast("Карточка не найдена"); return; }
+  const gsel=S.groups.map(g=>'<option value="'+esc(g.groupId)+'"'+
+    ((c?c.groupId:clFilter)===g.groupId?" selected":"")+'>'+esc(g.title)+'</option>').join("");
+  $("#cl-edit").innerHTML=
+    '<div class="panel stack" style="margin-bottom:16px">'+
+      '<div><div class="eyebrow">'+(c?"Карточка клиента":"Новый клиент")+'</div>'+
+      '<h3 style="font-size:19px;margin-top:6px">'+(c?esc(c.n):"Добавление в базу")+'</h3></div>'+
+      '<div class="form-grid">'+
+        '<div class="field"><label for="ed-name">ФИО — обязательно</label>'+
+          '<input id="ed-name" value="'+esc(c?c.n:"")+'"><span class="msg" hidden></span></div>'+
+        '<div class="field"><label for="ed-tel">Телефон</label>'+
+          '<input id="ed-tel" inputmode="tel" value="'+esc(c?c.tel:"")+'" placeholder="+992 ___ __ __ __">'+
+          '<span class="hint">Девять цифр после +992. Запишется как +992 XXX XX XX XX</span></div>'+
+        '<div class="field"><label for="ed-group">Группа</label><select id="ed-group">'+gsel+'</select></div>'+
+        '<div class="field"><label for="ed-note">Пометка</label>'+
+          '<input id="ed-note" value="'+esc(c&&c.note?c.note:"")+'" placeholder="например: Бета">'+
+          '<span class="hint">Чтобы отличать однофамильцев</span></div>'+
+        '<div class="field"><label for="ed-start">Начало курса</label>'+
+          '<input type="date" id="ed-start" value="'+esc(c&&c.start?c.start:"")+'"></div>'+
+        '<div class="field"><label for="ed-end">Окончание курса</label>'+
+          '<input type="date" id="ed-end" value="'+esc(c&&c.end?c.end:"")+'"></div>'+
+      '</div>'+
+      '<div class="row">'+
+        '<button class="btn btn-primary" id="ed-save">Сохранить</button>'+
+        '<button class="btn btn-ghost" id="ed-cancel">Отмена</button>'+
+        (c?'<button class="btn btn-ghost" id="ed-del" style="margin-left:auto;color:var(--bad);border-color:var(--bad)">Удалить из базы</button>':'')+
+      '</div>'+
+      '<div id="ed-confirm"></div>'+
+    '</div>';
+  $("#ed-cancel").addEventListener("click",closeEdit);
+  $("#ed-save").addEventListener("click",()=>saveClient(c));
+  if(c) $("#ed-del").addEventListener("click",()=>askDelete(c));
+  $("#ed-name").focus();
+  $("#cl-edit").scrollIntoView({block:"nearest"});
+}
+async function saveClient(c){
+  const name=$("#ed-name").value.trim();
+  const f=$("#ed-name").closest(".field"), m=f.querySelector(".msg");
+  if(!name){ f.classList.add("err"); m.textContent="Укажите ФИО"; m.hidden=false; return; }
+  f.classList.remove("err"); m.hidden=true;
+  const t=fmtTel($("#ed-tel").value);
+  const patch={name:name,note:$("#ed-note").value.trim()||null,tel:t.tel,telCheck:t.check,
+    start:$("#ed-start").value||"",end:$("#ed-end").value||""};
+  const newGid=$("#ed-group").value;
+  const btn=$("#ed-save"); btn.disabled=true; btn.textContent="Сохраняем…";
+  try{
+    if(!c){
+      const id="c"+Date.now().toString(36);
+      await mutateGroup(newGid,items=>items.push(Object.assign(
+        {id:id,flag:false,nam:0,eli:0,noy:0,total:0},patch)));
+      toast("Клиент добавлен");
+    }else if(newGid===c.groupId){
+      await mutateGroup(c.groupId,items=>{
+        const i=items.findIndex(x=>x.id===c.id);
+        if(i<0) throw {code:"invalid_argument",message:"Карточка уже изменена"};
+        Object.assign(items[i],patch);
+      });
+      toast("Сохранено");
+    }else{
+      let moved=null;
+      await mutateGroup(c.groupId,items=>{
+        const i=items.findIndex(x=>x.id===c.id);
+        if(i<0) throw {code:"invalid_argument",message:"Карточка уже изменена"};
+        moved=Object.assign({},items[i],patch); items.splice(i,1);
+      });
+      await mutateGroup(newGid,items=>items.push(moved));
+      toast("Перенесено в другую группу");
+    }
+    closeEdit();
+  }catch(err){
+    btn.disabled=false; btn.textContent="Сохранить";
+    const code=err&&err.code;
+    if(code==="invalid_argument"&&err.message) toast(err.message);
+    else if(code==="invalid_argument"){ S.canWrite=false; paintRole(); toast("Нет прав на правку базы"); }
+    else if(code==="quota_exceeded") toast("База заполнена");
+    else toast("Не удалось сохранить. Попробуйте ещё раз");
+  }
+}
+function askDelete(c){
+  $("#ed-confirm").innerHTML='<div class="note note-bad"><span>Удалить <b>'+esc(c.n)+
+    '</b> из базы? Записи в расписании останутся на месте.<br>'+
+    '<button class="btn btn-ghost btn-sm" id="ed-del-yes" style="margin-top:10px;color:var(--bad);border-color:var(--bad)">'+
+    'Да, удалить</button> '+
+    '<button class="btn btn-ghost btn-sm" id="ed-del-no" style="margin-top:10px">Отмена</button></span></div>';
+  $("#ed-del-no").addEventListener("click",()=>{$("#ed-confirm").innerHTML="";});
+  $("#ed-del-yes").addEventListener("click",async()=>{
+    $("#ed-del-yes").disabled=true;
+    try{
+      await mutateGroup(c.groupId,items=>{
+        const i=items.findIndex(x=>x.id===c.id);
+        if(i>=0) items.splice(i,1);
+      });
+      toast("Клиент удалён из базы"); closeEdit();
+    }catch(err){ $("#ed-del-yes").disabled=false; toast("Не удалось удалить"); }
+  });
+}
+$("#cl-add").addEventListener("click",()=>openClientEdit(null));
+$("#cl-body").addEventListener("click",e=>{
+  const b=e.target.closest("[data-edit]"); if(!b) return;
+  openClientEdit(b.getAttribute("data-edit"));
+});
+
+/* ── график месяца ── */
+let moMonth=null;
+const RU_MONTHS=["январь","февраль","март","апрель","май","июнь","июль","август",
+  "сентябрь","октябрь","ноябрь","декабрь"];
+function monthLabel(m){ return RU_MONTHS[parseInt(m.slice(5,7),10)-1]+" "+m.slice(0,4); }
+function shortName(n){
+  const s=String(n||"").replace(/["«»]/g,"").trim().split(/\s+/)[0];
+  return s.length>12?s.slice(0,11)+"…":s;
+}
+function renderMonth(){
+  if(!S.settings||!S.days.size) return;
+  const months=Array.from(new Set(Array.from(S.days.keys()).map(k=>k.slice(0,7)))).sort();
+  if(!moMonth||months.indexOf(moMonth)<0)
+    moMonth=(S.date&&months.indexOf(S.date.slice(0,7))>=0)?S.date.slice(0,7):months[months.length-1];
+  const sel=$("#mo-pick");
+  const opts=months.map(m=>'<option value="'+m+'"'+(m===moMonth?" selected":"")+'>'+monthLabel(m)+'</option>').join("");
+  if(sel.innerHTML!==opts) sel.innerHTML=opts;
+
+  const rooms=S.settings.rooms, slots=S.settings.slots;
+  const keys=Array.from(S.days.keys()).filter(k=>k.indexOf(moMonth)===0).sort();
+  let head='<thead><tr><th class="d" rowspan="2">Дата</th>';
+  rooms.forEach((r,i)=>head+='<th class="rm'+(i%3)+'" colspan="'+slots.length+'">'+esc(r.name)+'</th>');
+  head+='<th rowspan="2">Раб.<br>дней</th></tr><tr>';
+  rooms.forEach((r,i)=>slots.forEach(s=>head+='<th class="rm'+(i%3)+'">'+s+'</th>'));
+  head+='</tr></thead>';
+
+  const counts=rooms.map(()=>slots.map(()=>0));
+  let wd=0, booked=0, body='<tbody>';
+  keys.forEach(k=>{
+    const d=S.days.get(k)||{};
+    const label=k.slice(8)+"."+k.slice(5,7)+" "+esc(d.weekdayShort||"");
+    if(d.closed){
+      body+='<tr class="off" data-d="'+k+'"><td class="d">'+label+'</td><td colspan="'+
+        (rooms.length*slots.length)+'">Воскресенье — выходной день</td><td>—</td></tr>';
+      return;
+    }
+    wd++;
+    body+='<tr data-d="'+k+'"><td class="d">'+label+'</td>';
+    rooms.forEach((r,ri)=>slots.forEach((s,si)=>{
+      const c=(d.grid&&d.grid[r.id]&&d.grid[r.id][s])||{};
+      if(c.client){
+        booked++; counts[ri][si]++;
+        body+='<td class="b" title="'+esc(c.client)+(c.group?" · "+esc(c.group):"")+
+          (c.course?" · "+esc(c.course):"")+'">'+esc(shortName(c.client))+'</td>';
+      }else body+='<td class="f">·</td>';
+    }));
+    body+='<td class="tnum">'+wd+'</td></tr>';
+  });
+  body+='</tbody>';
+
+  let foot='<tfoot><tr><td class="d">Занято</td>';
+  rooms.forEach((r,ri)=>slots.forEach((s,si)=>foot+='<td class="tnum">'+counts[ri][si]+'</td>'));
+  foot+='<td class="tnum">'+booked+'</td></tr></tfoot>';
+
+  $("#mo-tbl").innerHTML=head+body+foot;
+  const cap=wd*rooms.length*slots.length;
+  $("#mo-sum").textContent=wd+" рабочих дней · занято "+booked+" из "+cap+" · "+
+    (cap?(booked/cap*100).toFixed(1).replace(".",","):"0")+" %";
+}
+$("#mo-pick").addEventListener("change",()=>{ moMonth=$("#mo-pick").value; renderMonth(); });
+$("#mo-tbl").addEventListener("click",e=>{
+  const tr=e.target.closest("tr[data-d]"); if(!tr) return;
+  setDate(tr.dataset.d); showTab("schedule");
+});
+
+/* ── экспорт ── */
+function csv(rows){
+  return "﻿"+rows.map(r=>r.map(v=>{
+    const s=String(v==null?"":v);
+    return /[";\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;
+  }).join(";")).join("\r\n");
+}
+async function offer(filename,text){
+  if(!S.dl){ toast("Скачивание недоступно в этом окне"); return; }
+  try{ await S.dl.save({filename:filename,data:text}); }
+  catch(err){
+    const c=err&&err.code;
+    if(c==="declined") return;
+    if(c==="rate_limited") toast("Уже открыто окно сохранения. Подождите");
+    else toast("Не удалось сохранить файл");
+  }
+}
+$("#ex-sched").addEventListener("click",()=>{
+  const rows=[["Дата","День","Кабинет","Время","Клиент","Курс","Телефон","Статус"]];
+  Array.from(S.days.keys()).sort().forEach(k=>{
+    const d=S.days.get(k);
+    S.settings.rooms.forEach(r=>S.settings.slots.forEach(s=>{
+      const c=(d.grid&&d.grid[r.id]&&d.grid[r.id][s])||{};
+      rows.push([k,d.weekday||"",r.name,s,c.client||"",c.course||"",c.tel||"",
+                 d.closed?"выходной":(c.client?"записан":"свободно")]);
+    }));
+  });
+  offer("raspisanie.csv",csv(rows));
+});
+$("#ex-clients").addEventListener("click",()=>{
+  const rows=[["Группа","Сегмент","ФИО","Нам","Ели","НОЙ","Итого","Начало курса","Окончание курса","Телефон"]];
+  S.clients.forEach(c=>{
+    const g=S.groups.find(x=>x.groupId===c.groupId)||{};
+    rows.push([g.title||"",g.segment||"",c.n,c.nam,c.eli,c.noy,c.total,c.start||"",c.end||"",c.tel||""]);
+  });
+  offer("klienty.csv",csv(rows));
+});
+
+/* ── роль и доступ ── */
+function paintRole(){
+  const el=$("#who-role");
+  if(!S.user){ el.textContent="Гость"; el.className="role ro"; return; }
+  if(S.role==="owner"){ el.textContent="Владелец"; el.className="role"; }
+  else if(S.role==="admin"){ el.textContent="Администратор"; el.className="role"; }
+  else if(S.canWrite===false){ el.textContent="Только просмотр"; el.className="role ro"; }
+  else { el.textContent="Сотрудник"; el.className="role"; }
+  const ro=S.canWrite===false;
+  $("#bk-submit").disabled=ro;
+  $("#cl-add").disabled=ro;
+  if(ro){ $("#bk-submit").textContent="Только просмотр"; $("#cl-add").textContent="Только просмотр"; }
+}
+
+/* ── навигация по датам ── */
+function setDate(d){ S.date=d; renderDay(); }
+function shift(n){
+  if(!S.date) return;
+  const d=new Date(S.date+"T00:00:00"); d.setDate(d.getDate()+n); setDate(iso(d));
+}
+$("#d-prev").addEventListener("click",()=>shift(-1));
+$("#d-next").addEventListener("click",()=>shift(1));
+$("#d-today").addEventListener("click",()=>setDate(pickDefaultDate()));
+$("#d-pick").addEventListener("change",()=>{ if($("#d-pick").value) setDate($("#d-pick").value); });
+function pickDefaultDate(){
+  const today=iso(new Date());
+  if(S.days.has(today)) return today;
+  const keys=Array.from(S.days.keys()).sort();
+  if(!keys.length) return today;
+  const future=keys.find(k=>k>=today);
+  return future||keys[keys.length-1];
+}
+
+/* ── подключение ── */
+async function boot(){
+  const use=window.claude&&window.claude.use;
+  if(!use){ offline("Кабинет открыт вне claude.ai, поэтому база недоступна."); return; }
+  const [db,user,dl]=await Promise.all([
+    claude.use("db").catch(()=>null),
+    claude.use("user").catch(()=>null),
+    claude.use("downloads").catch(()=>null)
+  ]);
+  S.db=db; S.user=user; S.dl=dl;
+
+  if(user){
+    try{
+      const me=await user.me();
+      $("#who-name").textContent=me&&me.name?me.name:"Вы вошли";
+      const owner=await user.isOwner(), admin=await user.canEdit();
+      S.role=owner?"owner":(admin?"admin":"staff");
+      S.canWrite=await user.can("data.write");
+    }catch(e){ S.role="staff"; }
+  }else{
+    $("#who-name").textContent="Вход не выполнен";
+  }
+  paintRole();
+  if(!S.dl) $("#ex-note").textContent="Скачивание недоступно в этом окне — откройте кабинет на claude.ai.";
+
+  if(!db){ offline("Войдите в аккаунт claude.ai, чтобы открыть базу кабинета."); return; }
+
+  try{
+    const st=await db.doc("settings/center").get();
+    if(st.exists) S.settings=st.data();
+  }catch(e){}
+  if(!S.settings){ offline("База кабинета пока пуста. Данные загружаются."); return; }
+
+  $("#conn").hidden=true;
+  fillForm();
+
+  db.collection("clients").onSnapshot(snap=>{
+    S.groups=[]; S.clients=[];
+    snap.docs.forEach(doc=>{
+      const d=doc.data()||{};
+      S.groups.push({groupId:doc.id,title:d.title||doc.id,segment:d.segment||"private",
+                     count:(d.items||[]).length});
+      (d.items||[]).forEach(it=>S.clients.push(Object.assign({groupId:doc.id,n:it.name||it.n||""},it)));
+    });
+    S.clients.sort((a,b)=>b.total-a.total||a.n.localeCompare(b.n,"ru"));
+    renderChips(); renderClients(); fillClientList(); renderLoad();
+  },err=>{ if(err.code!=="unavailable") toast("Клиенты не загрузились: "+err.code); });
+
+  db.collection("days").onSnapshot(snap=>{
+    S.days=new Map(); snap.docs.forEach(doc=>S.days.set(doc.id,doc.data()||{}));
+    if(!S.date) S.date=pickDefaultDate();
+    if(!$("#bk-date").value) $("#bk-date").value=S.date;
+    renderDay(); renderMonth(); renderLoad();
+  },err=>{ if(err.code!=="unavailable") toast("Расписание не загрузилось: "+err.code); });
+}
+function offline(msg){
+  $("#conn").className="note note-bad";
+  $("#conn").innerHTML="<span>"+esc(msg)+"</span>";
+  $("#grid").innerHTML='<div class="muted" style="grid-column:1/-1;padding:28px 0">Расписание появится, когда база ответит.</div>';
+  $("#cl-body").innerHTML='<tr><td colspan="8" class="muted" style="padding:22px">База недоступна.</td></tr>';
+  $("#ld-tiles").innerHTML='<div class="tile"><div class="k">Нет данных</div><div class="v">—</div>'+
+    '<div class="s">база недоступна</div></div>';
+  $("#bk-submit").disabled=true;
+}
+boot();
+})();
+</script>

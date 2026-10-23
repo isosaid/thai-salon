@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Знак ОРОМ">
+  <title>ОРОМ — знак</title>
+  <g fill="none" stroke-linecap="round">
+    <path d="M10 44a22 22 0 0 1 44 0" stroke="#1F3D32" stroke-width="4.5"/>
+    <path d="M18.5 44a13.5 13.5 0 0 1 27 0" stroke="#2E5A49" stroke-width="4.5"/>
+    <path d="M27 44a5 5 0 0 1 10 0" stroke="#C06B4A" stroke-width="4.5"/>
+    <path d="M7 51.5h50" stroke="#1F3D32" stroke-width="4.5"/>
+  </g>
+</svg>
