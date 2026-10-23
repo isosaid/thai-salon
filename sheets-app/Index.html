@@ -37,6 +37,9 @@
   color-scheme:dark;
 }}
 *{box-sizing:border-box}
+/* Атрибут hidden должен побеждать любые display у блоков: без !important
+   экран входа и скрытые вкладки остаются видимыми. */
+[hidden]{display:none!important}
 html,body{margin:0}
 body{background:var(--bg);color:var(--fg);font:400 16px/1.55 var(--f-text)}
 h1,h2,h3{font-family:var(--f-display);font-weight:700;margin:0;text-wrap:balance}

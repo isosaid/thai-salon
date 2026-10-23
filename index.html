@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Тайский салон · рабочий кабинет</title>
+<meta name="description" content="Кабинет оздоровительного тайского салона: расписание трёх кабинетов, запись курсом, база клиентов. Данные в Google Sheets, вход по паролю.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+:root{
+  --forest-800:#1F3D32; --forest-700:#2E5A49; --forest-300:#9CBFB0; --forest-100:#DCE9E3;
+  --terra-600:#B45A38; --terra-700:#9E4A2E; --terra-500:#C06B4A;
+  --sand-300:#EADFD0; --sand-100:#F4EDE3; --cream:#FBF8F3; --gold:#C9922F;
+  --bg:var(--cream); --surface:var(--sand-100); --inverse:var(--forest-800);
+  --fg:#1A1714; --fg-2:#4A423A; --fg-muted:#7A6E62; --line:#E3D9CB;
+  --action:var(--forest-700); --accent-text:var(--terra-700);
+  --f-display:"PT Serif",Georgia,serif;
+  --f-text:"Inter",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){ :root{
+  --bg:#101D18; --surface:#16281F; --inverse:#0A1510;
+  --fg:#EFE7DB; --fg-2:#B3A897; --fg-muted:#8C8375; --line:#2A4035;
+  --action:#4E9478; --accent-text:#E09A76; --forest-100:#1E3B2F; --sand-300:#1F3D32;
+  color-scheme:dark;
+}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font:400 16px/1.6 var(--f-text)}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;margin:0;text-wrap:balance}
+a{color:var(--action)}
+code{font-family:var(--f-mono);font-size:.92em;background:var(--surface);padding:1px 5px;border-radius:4px}
+.wrap{max-width:900px;margin:0 auto;padding-inline:max(20px,env(safe-area-inset-left,0px))}
+.band{background:var(--inverse);color:var(--cream)}
+.band .wrap{padding-block:56px 52px}
+.eyebrow{font-size:11.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--terra-500)}
+h1{font-size:clamp(34px,6vw,56px);letter-spacing:4px;margin:14px 0 6px}
+.band .sub{font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--forest-300)}
+.band p.lede{color:var(--forest-100);max-width:58ch;margin:22px 0 0;font-size:17px}
+section{padding-block:48px}
+section h2{font-size:clamp(24px,3.6vw,32px);margin-bottom:6px}
+section .note-sub{color:var(--fg-muted);font-size:14.5px;margin:0 0 24px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:30px}
+.fact{background:rgba(255,255,255,.07);border-radius:16px;padding:14px 16px}
+.fact b{display:block;font-family:var(--f-display);font-size:26px;line-height:1.1}
+.fact span{font-size:11.5px;color:var(--forest-300)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:var(--surface);border-radius:18px;padding:20px;min-width:0}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{margin:0;color:var(--fg-2);font-size:14.5px}
+.card .tag{display:inline-block;margin-top:12px;font-size:11.5px;font-weight:600;
+  padding:3px 10px;border-radius:999px;background:var(--forest-100);color:var(--action)}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:12px;
+  background:var(--action);color:#fff;text-decoration:none;font-weight:500}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:480px;font-size:14.5px}
+th{text-align:left;background:var(--sand-300);font-size:10.5px;letter-spacing:.07em;
+  text-transform:uppercase;padding:9px 10px;color:var(--fg-2)}
+td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.creds{font-family:var(--f-mono);font-size:13.5px}
+.warn{background:color-mix(in srgb,var(--gold) 16%,transparent);border-radius:12px;padding:14px 16px;font-size:14.5px}
+footer{border-top:1px solid var(--line);padding-block:28px 40px;color:var(--fg-muted);font-size:13.5px}
+ol{padding-left:20px;color:var(--fg-2);font-size:15px;line-height:1.75}
+</style>
+</head>
+<body>
+
+<div class="band">
+  <div class="wrap">
+    <svg width="46" height="46" viewBox="0 0 64 64" aria-hidden="true">
+      <g fill="none" stroke-linecap="round" stroke-width="4">
+        <path d="M32 52C16 41 15 23 32 7" stroke="#FBF8F3"/>
+        <path d="M32 52C48 41 49 23 32 7" stroke="#FBF8F3"/>
+        <path d="M24 44C24 34 27 27 32 21" stroke="#C06B4A"/>
+        <path d="M40 44C40 34 37 27 32 21" stroke="#9CBFB0"/>
+        <path d="M15 57h34" stroke="#FBF8F3"/>
+      </g>
+    </svg>
+    <h1>ТАЙСКИЙ САЛОН</h1>
+    <p class="sub">Оздоровительный тайский салон · Душанбе</p>
+    <p class="lede">
+      Рабочий кабинет салона: расписание трёх кабинетов по шесть слотов, запись курсом
+      из десяти сеансов, база клиентов и показатели загрузки. Данные живут в Google-таблице,
+      вход проверяет сервер.
+    </p>
+    <div class="facts">
+      <div class="fact"><b>3</b><span>кабинета</span></div>
+      <div class="fact"><b>6</b><span>слотов в день</span></div>
+      <div class="fact"><b>1,5 ч</b><span>сеанс</span></div>
+      <div class="fact"><b>10</b><span>сеансов в курсе</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<section>
+  <h2>Демо кабинета</h2>
+  <p class="note-sub">Полный интерфейс на вымышленных данных. Правки живут до обновления страницы.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Роль</th><th>Логин</th><th>Пароль</th><th>Что доступно</th></tr></thead>
+    <tbody>
+      <tr><td>Администратор</td><td class="creds">demo@salon.tj</td><td class="creds">demo1234</td>
+          <td>всё, включая удаление карточек</td></tr>
+      <tr><td>Мастер</td><td class="creds">master@salon.tj</td><td class="creds">demo1234</td>
+          <td>запись, карточки без удаления</td></tr>
+      <tr><td>Только просмотр</td><td class="creds">view@salon.tj</td><td class="creds">demo1234</td>
+          <td>расписание; клиенты скрыты</td></tr>
+    </tbody>
+  </table></div>
+  <div class="row">
+    <a class="btn" href="demo/">Открыть демо</a>
+    <a class="btn ghost" href="https://github.com/isosaid/thai-salon">Исходный код</a>
+  </div>
+</section>
+
+<section>
+  <h2>Две версии кабинета</h2>
+  <p class="note-sub">Обе работают на одних данных учётной книги.</p>
+  <div class="cards">
+    <div class="card">
+      <h3>На Google Sheets</h3>
+      <p>База — Google-таблица, вход по почте и паролю. Код выполняется на стороне Google
+         через Apps Script, поэтому сотрудникам не нужен доступ к самой таблице:
+         они работают через сайт и не видят ни листов, ни чужих данных сверх своей роли.</p>
+      <span class="tag">пароли, серверная проверка</span>
+    </div>
+    <div class="card">
+      <h3>На базе артефакта</h3>
+      <p>Данные в хранилище артефакта claude.ai, вход по аккаунту. Разворачивается без
+         настройки, роли берутся из уровня доступа к странице. Подходит, когда нужно
+         начать работать сегодня.</p>
+      <span class="tag">быстрый запуск</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Как устроен вход</h2>
+  <p class="note-sub">Почему проверка пароля вынесена на сервер.</p>
+  <ol>
+    <li>Пароли хранятся солёными хешами: 12 000 проходов SHA-256 по строке «соль｜пароль».
+        Восстановить пароль из хеша нельзя, можно только задать новый.</li>
+    <li>Сравнение идёт за постоянное время, перед ответом пауза, а на неверную почту
+        и неверный пароль ответ одинаковый — перебор бессмыслен.</li>
+    <li>Сессия живёт 12 часов и сбрасывается, когда сотрудника отключают.</li>
+    <li>Роль проверяется на сервере при каждом обращении, а не прячется в интерфейсе:
+        «только просмотр» не получает карточки клиентов даже запросом напрямую.</li>
+  </ol>
+  <p class="warn" style="margin-top:22px">
+    В демо-версии сервера нет: это статическая страница, и проверка пароля в ней
+    показательная. Настоящая защита работает только в версии на Google Sheets.
+  </p>
+</section>
+
+<section>
+  <h2>Что в репозитории</h2>
+  <div class="cards">
+    <div class="card"><h3>sheets-app</h3>
+      <p>Apps Script: вход, расписание, запись, карточки, меню управления таблицей.</p></div>
+    <div class="card"><h3>portal</h3>
+      <p>Версия кабинета на базе артефакта, одна самодостаточная страница.</p></div>
+    <div class="card"><h3>import</h3>
+      <p>Разбор учётной книги Excel: нормализация имён, связывание записей с карточками,
+         сверка счётчиков.</p></div>
+    <div class="card"><h3>design-system</h3>
+      <p>37 файлов и 15 SVG-образцов: палитра с проверенными контрастами, типографика
+         с таджикскими глифами, компоненты, образцы постеров и документов.</p></div>
+    <div class="card"><h3>brand</h3>
+      <p>Логотипы: пять знаков, шесть лок-апов, монограммы.</p></div>
+    <div class="card"><h3>demo</h3>
+      <p>Эта страница и демо кабинета на вымышленных данных.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>О данных</h2>
+  <p style="max-width:62ch;color:var(--fg-2)">
+    Карточек клиентов, телефонов и заполненного расписания в репозитории нет: это
+    персональные данные живых людей. Вместо них лежат обезличенные образцы той же
+    структуры, а настоящие собираются скриптом из учётной книги локально.
+    Названия корпоративных клиентов в примерах тоже заменены вымышленными.
+  </p>
+</section>
+
+<footer class="wrap">
+  Оздоровительный тайский салон · Душанбе<br>
+  Исходный код — <a href="https://github.com/isosaid/thai-salon">github.com/isosaid/thai-salon</a>
+</footer>
+
+</div>
+</body>
+</html>
